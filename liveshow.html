@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liveshow</title>
+    <!-- 漢堡套件 -->
+    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./liveshowcss.css">
+</head>
+
+<body>
+    <!-- RWD導覽列 -->
+    <nav class="rwd">
+        <ul class="rwd-nav">
+            <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+            <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+            <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+            <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+            <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+            <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+        </ul>
+    </nav>
+    <!-- RWD導覽列 -->
+    <nav class="nav">
+        <div class="nav-box">
+            <div class="logo">
+                <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+            </div>
+            <div class="menu-all">
+                <button class="hamburger hamburger--emphatic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="menu-left">
+                    <ul class="menu">
+                        <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+                        <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+                        <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+                        <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+                        <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+                        <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+                    </ul>
+                </div>
+                <div class="menu-right">
+                    <ul class="search">
+                        <li><i class="fas fa-search fa-2x"></i></li>
+                        <li><i class="fas fa-cloud-upload-alt fa-2x"></i></li>
+                        <li><i class="fas fa-user-circle fa-2x"></i></li>
+                    </ul>
+
+                    <div class="search-bar">
+                        <div class="border-up-empty">
+                            <span></span>
+                        </div>
+                        <input type="text" placeholder="找音樂?">
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <video autoplay loop muted>
+        <source
+            src="../作品/video/Music Event Promo _ Party Invitation _ Night Club - Free Download After Effects Templates.mp4"
+            type="video/mp4">
+        Your browser does not support the video tag.
+        <!--當影片沒辦法播放時會跑出這段文字-->
+    </video>
+
+
+
+    <div class="liveshow-body">
+        <div class="show-search">
+            <input type="text" placeholder="關鍵字">
+            <hr>
+            <div class="place">
+                地區
+            </div>
+            <div class="place-choose">
+                <div>
+                    全部
+                </div>
+                <div>
+                    北部
+                </div>
+                <div>
+                    中部
+                </div>
+                <div>
+                    南部
+                </div>
+                <div>
+                    東部
+                </div>
+                <div>
+                    西部
+                </div>
+            </div>
+            <hr>
+            <div class="date">
+                日期
+            </div>
+            <select name="" id="datechoose">
+                <option value="">近期活動</option>
+                <option value="">這個月</option>
+                <option value="">下個月</option>
+                <option value="">選擇日期</option>
+            </select>
+        </div>
+        <div class="all-show-right">
+            <div class="show-right">
+                <div class="datebox">
+                    <div class="datenum">
+                        <div class="marth">
+                            Oct
+                        </div>
+                        <div class="num">
+                            4
+                        </div>
+                        <div class="weed">
+                            Sunday
+                        </div>
+                    </div>
+                </div>
+                <div class="show-page">
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/藝想.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                藝響1884─古蹟音樂活動 10/04
+                            </h2>
+                            <p class="placetitle">
+                                10:00．新北市．淡水紅毛城、小白宮
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    廖翊婷
+                                </span>
+                                <span>
+                                    嘉成弦樂四重奏
+                                </span>
+                                <span>
+                                    Everfor
+                                </span>
+                                <span>
+                                    林哲安
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/拾夢.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                第三十七屆政大金旋獎決賽｜拾夢
+                            </h2>
+                            <p class="placetitle">
+                                12:00．台北市．WESTAR
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    YELLOW
+                                </span>
+                                <span>
+                                    李友廷
+                                </span>
+                                <span>
+                                    尋找尼歐
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-right">
+                <div class="datebox">
+                    <div class="datenum">
+                        <div class="marth">
+                            Oct
+                        </div>
+                        <div class="num">
+                            5
+                        </div>
+                        <div class="weed">
+                            Monday
+                        </div>
+                    </div>
+                </div>
+                <div class="show-page">
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/雨國.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                雨國 Kingdom Of Rain《無所謂》
+                            </h2>
+                            <p class="placetitle">
+                                19:00．台北市．THE WALL 公館
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    雨國
+                                </span>
+                                <span>
+                                    凹與山Our Shame
+                                </span>
+                                <span>
+                                    記號士
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/紐約.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                《紐約地鐵六號24小時不打烊》
+                            </h2>
+                            <p class="placetitle">
+                                20:00．台北市．所 Soul Space
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    Fi-Né粉內
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-right">
+                <div class="datebox">
+                    <div class="datenum">
+                        <div class="marth">
+                            Oct
+                        </div>
+                        <div class="num">
+                            6
+                        </div>
+                        <div class="weed">
+                            Tuesday
+                        </div>
+                    </div>
+                </div>
+                <div class="show-page">
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/幻境.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                終極幻境 vol. 2：夢遺如來
+                            </h2>
+                            <p class="placetitle">
+                                20:00．台北市．樂悠悠之口 光復南
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    夢遺如來
+                                </span>
+                                <span>
+                                    類比梭羅
+                                </span>
+                                <span>
+                                    宇宙計程車
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/dozz.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                DoZzz 《Passage》首張專輯發行專場
+                            </h2>
+                            <p class="placetitle">
+                                19:00．台北市．Pipe Live Music
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    DoZzz
+                                </span>
+                                <span>
+                                    Manic Sheep
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-right">
+                <div class="datebox">
+                    <div class="datenum">
+                        <div class="marth">
+                            Oct
+                        </div>
+                        <div class="num">
+                            7
+                        </div>
+                        <div class="weed">
+                            Wednesday
+                        </div>
+                    </div>
+                </div>
+                <div class="show-page">
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/衝擊.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                Visual Impact -視覺衝擊-
+                            </h2>
+                            <p class="placetitle">
+                                18:00．台北市．凝聚力音樂娛樂
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    第一戰線
+                                </span>
+                                <span>
+                                    Efflore白華
+                                </span>
+                                <span>
+                                    Noroi
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/BRANI.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                BROCKHAMPTON
+                            </h2>
+                            <p class="placetitle">
+                                13:00．O2．Academy
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    Sixcve pop
+                                </span>
+                                <span>
+                                    Nick
+                                </span>
+                                <span>
+                                    lil blood
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-right">
+                <div class="datebox">
+                    <div class="datenum">
+                        <div class="marth">
+                            Oct
+                        </div>
+                        <div class="num">
+                            8
+                        </div>
+                        <div class="weed">
+                            Thursday
+                        </div>
+                    </div>
+                </div>
+                <div class="show-page">
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="./img/Liveshow/S2O.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                2020電音節：S2O
+                            </h2>
+                            <p class="placetitle">
+                                13:00．台北市大佳河濱公園
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    JUNIOR
+                                </span>
+                                <span>
+                                    DJ MR. SKIN
+                                </span>
+                                <span>
+                                    Don Diablo
+                                </span>
+                                <span>
+                                    Paul Van Dyk
+                                </span>
+                                <span>
+                                    TysonYoshi
+                                </span>
+                                <span>
+                                    VIGOZ
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-world">
+                        <div class="showimg">
+                            <img src="../作品/img/演出小圖.png" alt="">
+                        </div>
+                        <div class="showworld">
+                            <h2 class="showname">
+                                仲秋物語・霜降｜薛丁格的貓｜
+                            </h2>
+                            <p class="placetitle">
+                                20:00．台北市．THE WALL 公館
+                            </p>
+                            <div class="singer">
+                                <span>
+                                    薛丁格的貓
+                                </span>
+                                <span>
+                                    吸菸所
+                                </span>
+                                <span>
+                                    溫宗益
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <hr class="liveshow-end">
+
+
+
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+        </div>
+        <div class="get1">
+            Get the app on iOS
+        </div>
+        <div class="get2">
+            and Android
+        </div>
+        <div class="footerworld1">
+            Explore radio shows, DJ mixes and podcasts
+        </div>
+        <div class="footerworld2">
+            made by passionate creators.
+        </div>
+        <div class="appget">
+            <div class="googleplay">
+                <img src="./img/google-play-badge.svg" alt="">
+            </div>
+            <div class="apple">
+                <img src="./img/applestore.jpg" alt="">
+            </div>
+        </div>
+        <div class="footerflw">
+            Follow Us
+        </div>
+        <div class="social-icon11">
+            <div>
+                <i class="fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-instagram fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-twitter fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+        </div>
+        <div class="footer-inf">
+            <div>
+                SUPPORT
+            </div>
+            <div>
+                ABOUT
+            </div>
+            <div>
+                TERMS USE
+            </div>
+        </div>
+    </footer>
+
+
+    <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="./vendors/ribbon/ribbon.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 漢堡JS -->
+    <script>
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $(this).toggleClass("is-active");
+            });
+        });
+
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $("nav.rwd").slideToggle();
+            });
+        });
+    </script>
+
+
+    <script>
+        $(`.search`).find(`li`).first().click(function () {
+            $(`.search-bar`).slideToggle();
+        });
+    </script>
+
+
+</body>
+
+</html>

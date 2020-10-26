@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderboard</title>
+    <!-- 漢堡套件 -->
+    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./leaderboardcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <style>
+        body {
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* margin: 0; */
+            /* background-color: #212121; */
+        }
+
+        .text-box {
+            margin: 0 auto;
+            /* border: 19px solid yellow; */
+            width: 700px;
+            height: 300px;
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            clip-path: url(#svgTextPath);
+            color: white;
+            background: #2fddc6;
+
+        }
+
+        .ww {
+            margin: 0 auto;
+        }
+
+        .dot {
+            display: inline-block;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.9;
+        }
+
+        .dot:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            background: rgb(30, 207, 148);
+            z-index: 8;
+            transform: translateX(-175px) translateY(-175px);
+        }
+
+        .dot:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            background: rgb(28, 204, 195);
+            z-index: 7;
+            transform: translateX(-250px) translateY(-250px);
+        }
+
+        .dot:nth-child(3) {
+            width: 500px;
+            height: 500px;
+            background: rgb(18, 155, 247);
+            z-index: 6;
+            transform: translateX(-350px) translateY(-350px);
+        }
+
+        text {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            font-weight: bold;
+            font-size: 8rem;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- RWD導覽列 -->
+    <nav class="rwd">
+        <ul class="rwd-nav">
+            <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+            <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+            <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+            <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+            <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+            <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+        </ul>
+    </nav>
+    <!-- RWD導覽列 -->
+    <nav class="nav">
+        <div class="nav-box">
+            <div class="logo">
+                <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+            </div>
+            <div class="menu-all">
+                <button class="hamburger hamburger--emphatic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="menu-left">
+                    <ul class="menu">
+                        <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+                        <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+                        <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+                        <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+                        <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+                        <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+                    </ul>
+                </div>
+                <div class="menu-right">
+                    <ul class="search">
+                        <li><i class="fas fa-search fa-2x"></i></li>
+                        <li><i class="fas fa-cloud-upload-alt fa-2x"></i></li>
+                        <li><i class="fas fa-user-circle fa-2x"></i></li>
+                    </ul>
+
+                    <div class="search-bar">
+                        <div class="border-up-empty">
+                            <span></span>
+                        </div>
+                        <input type="text" placeholder="找音樂?">
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <div class="text-box">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <svg height="0" width="0">
+        <defs>
+            <clipPath id="svgTextPath">
+                <!-- textLength 文字的长度 此处对应容器的宽度  x y 为横纵坐标位置 -->
+                <text x="0" y="180" textLength="680px">leader</text>
+                <text x="80" y="300" textLength="520px">board</text>
+            </clipPath>
+        </defs>
+    </svg>
+
+
+
+
+
+
+    <h1 class="leaderboard-title">排行榜</h1>
+    <hr class="lea-hr">
+    <div class="leaderboard-all">
+        <div class="lea-cation">
+            <div class="lea-name">
+                分類排行榜
+            </div>
+            <ul class="lea-list">
+                <li><i class="fas fa-angle-right"></i>即時熱門</li>
+                <li><i class="fas fa-angle-right"></i>嘻哈 / 饒舌 / Funk</li>
+                <li><i class="fas fa-angle-right"></i>R&B / 藍調 / 爵士</li>
+                <li><i class="fas fa-angle-right"></i>Remix / ACG / EDM/電音</li>
+                <li><i class="fas fa-angle-right"></i>古典 / New Age</li>
+                <li><i class="fas fa-angle-right"></i>搖滾 / 金屬 / 龐克</li>
+            </ul>
+        </div>
+        <div class="title-song">
+            <div class="leatitle-all">
+                <div class="lea-title">
+                    即時熱門
+                </div>
+                <div class="playall">
+                    <i class="fas fa-play"></i> 全部播放
+                </div>
+                <div class="lea-time">
+                    2020 / 09 / 21 ~ 2020 / 09 / 27
+                </div>
+            </div>
+            <div class="lea-song-list">
+                <div class="song-line">
+                    <div class="num">
+                        1 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="../作品/img/排行榜歌圖1.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        Imma Get A New One<br><span>持修</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 18.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        2 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/批星戴月的想你.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        披星戴月的想你<br><span>告五人 Accusefive</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 17.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        3 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/不是因為天氣.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        不是因為天氣晴朗才愛你<br><span>理想混蛋 Bestards</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 16.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        4 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/tic.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        TIC<br><span>珂拉琪 Collage</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 15.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        5 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/餘生.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        餘生漫漫<br><span>Tee Train蔡題謙</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 14.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        6 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/睡不著.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        睡不著<br><span>?te 壞特</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 13.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        7 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/logic.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        Bounce<br><span>Logic</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 12.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        8 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/li.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        hardy<br><span>lil jeff</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 11.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        9 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/rich.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        Bank Roll<br><span> Rich Chigga & Young Thug</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 10.8k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        10 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/望鄉.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        望鄉<br><span>白鐵仔Pehthiha</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 10.5k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        11 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/沒心.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        沒心<br><span>鐵擊</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 10.3k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        12 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/2尼哥.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        Sahbabii<br><span> Ah Stick Ft Young Thug</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 10.2k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+                <div class="song-line">
+                    <div class="num">
+                        13 <i class="fas fa-sort-up"></i>
+                    </div>
+                    <div class="lea-img">
+                        <img src="./img/green.png" alt="">
+                    </div>
+                    <div class="song-name">
+                        Ekali<br><span>Diplo & Friends Mix</span>
+                    </div>
+                    <div class="add">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="heart">
+                        <i class="fas fa-heartbeat"></i> 10.1k
+                    </div>
+                    <div class="play">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+                <hr class="songlist-hr">
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <hr class="banner-end">
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+        </div>
+        <div class="get1">
+            Get the app on iOS
+        </div>
+        <div class="get2">
+            and Android
+        </div>
+        <div class="footerworld1">
+            Explore radio shows, DJ mixes and podcasts
+        </div>
+        <div class="footerworld2">
+            made by passionate creators.
+        </div>
+        <div class="appget">
+            <div class="googleplay">
+                <img src="./img/google-play-badge.svg" alt="">
+            </div>
+            <div class="apple">
+                <img src="./img/applestore.jpg" alt="">
+            </div>
+        </div>
+        <div class="footerflw">
+            Follow Us
+        </div>
+        <div class="social-icon11">
+            <div>
+                <i class="fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-instagram fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-twitter fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+        </div>
+        <div class="footer-inf">
+            <div>
+                SUPPORT
+            </div>
+            <div>
+                ABOUT
+            </div>
+            <div>
+                TERMS USE
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="./vendors/ribbon/ribbon.js"></script>
+
+    <script src="./MOUSEjs/TweenMax.min.js"></script>
+    <script>
+        function move() {
+            let box = document.querySelector(".text-box");
+            let dt = document.querySelectorAll(".dot");
+            window.addEventListener("mousemove", function (e) {
+                for (let i = 0; i < dt.length; i++) {
+                    //圆灯相对于 容器的坐标位置
+                    let x = e.pageX - box.offsetLeft - dt[i].offsetWidth / 2;
+                    let y = e.pageY - box.offsetTop - dt[i].offsetHeight / 2;
+                    TweenLite.to(dt[i], i + 0.2, {
+                        x: x,
+                        y: y,
+                        ease: Back.easeOut.config(1.7)
+                    });
+                }
+            });
+        }
+        move()
+    </script>
+
+    <!-- 漢堡JS -->
+    <script>
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $(this).toggleClass("is-active");
+            });
+        });
+
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $("nav.rwd").slideToggle();
+            });
+        });
+    </script>
+
+
+    <!-- 歌曲hover -->
+    <script>
+        // $(`.song-line`).on(`mouseenter mouseleave`, function () {
+        //     $(this).toggleClass(`song-line-hover`);
+        // });
+
+        // $(`.song-line`).on(`mouseenter`, function () {
+        //     $(`.add`).removeClass(`add-b`);
+        // }).on(`mouseleave`, function () {
+        //     $(`.add`).addClass(`add-b`);
+        // })
+        $(`.song-line`).hover(function () {
+            $(this).toggleClass(`song-line-hover`);
+            $(this).find(`div`).first().next().next().next().toggle(300);
+        });
+
+    </script>
+
+    <!-- 歌曲分類 -->
+    <script>
+        $(`.lea-list li`).hover(function () {
+            $(this).find(`i`).toggle(300);
+        });
+    </script>
+
+    <script>
+        $(`.search`).find(`li`).first().click(function () {
+            $(`.search-bar`).slideToggle();
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

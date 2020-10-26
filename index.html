@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Drink Can</title>
+
+    <!-- 大家都在聽套件CSS -->
+    <link type="text/css" rel="stylesheet" href="./vendors/jqueryswiperlbt/css/style.css">
+
+    <!-- icon-CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <!-- banner套件CSS     -->
+    <link rel="stylesheet" href="./vendors/jqueryLayerSlider/layerslider.css">
+    <!-- aos套件 -->
+    <link rel="stylesheet" href="./vendors/aos/css/aoscss.css">
+    <!-- 小動畫套件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <!-- 漢堡套件 -->
+    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <!-- 主樣式CSS -->
+    <link rel="stylesheet" href="./indexcss.css">
+</head>
+
+<body>
+    <!-- RWD導覽列 -->
+    <nav class="rwd">
+        <ul class="rwd-nav">
+            <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+            <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+            <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+            <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+            <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+            <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+        </ul>
+    </nav>
+    <!-- RWD導覽列 -->
+    <nav class="nav">
+        <div class="nav-box">
+            <div class="logo">
+                <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+            </div>
+            <div class="menu-all">
+                <button class="hamburger hamburger--emphatic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="menu-left">
+                    <ul class="menu">
+                        <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+                        <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+                        <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+                        <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+                        <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+                        <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+                    </ul>
+                </div>
+                <div class="menu-right">
+                    <ul class="search">
+                        <li><i class="fas fa-search fa-2x"></i></li>
+                        <li><i class="fas fa-cloud-upload-alt fa-2x"></i></li>
+                        <li><i class="fas fa-user-circle fa-2x"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="firstsee">
+        <div class="big">
+            <img class="big-img" src="./img/大版圖1.png" alt="">
+            <img class="wave" src="./img/音波wave.gif" alt="">
+        </div>
+    </div>
+    <hr class="firsrline">
+
+
+    <div class="banner">
+        <div class="ls-slide" data-ls="slidedelay:7000; transition2d: all;">
+            <img src="./img/輪播1.jpg" class="ls-bg" alt="">
+        </div>
+
+        <div class="ls-slide" data-ls="slidedelay:7000; transition2d: all;">
+            <img src="./img/輪播2.jpg" class="ls-bg" alt="">
+        </div>
+
+        <div class="ls-slide" data-ls="slidedelay:7000; transition2d: all;">
+            <img src="./img/輪播3.jpg" class="ls-bg" alt="">
+        </div>
+
+        <div class="ls-slide" data-ls="slidedelay:7000; transition2d: all;">
+            <img src="./img/輪播4.jpg" class="ls-bg" alt="">
+        </div>
+
+        <div class="ls-slide" data-ls="slidedelay:7000; transition2d: all;">
+            <img src="./img/輪播5.jpg" class="ls-bg" alt="">
+        </div>
+    </div>
+
+
+
+
+    <p class="runhorse animate__infinite animate__animated animate__flipInX">【這些歌你聽了嗎?】精選推薦歌單<i
+            class="fas fa-music"></i> sound of 2020馬上聽</p>
+    <hr class="banner-end">
+
+    <div class="onepart">
+        <div class="every-title">大家都在聽</div>
+        <div class="every-genres">歌曲種類<i class="fas fa-sort-down fa-2x"></i></div>
+        <div class="all-play"><i class="fas fa-play"></i>全部播放</div>
+    </div>
+
+
+
+
+    <div class="banner-box">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-center none-effect">
+                    <a href="javascript:;">
+                        <img src="./img/歌圖1.png" about="" title="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="./img/歌圖2.png" about="" title="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="./img/歌圖3.jpg" about="" title="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="./img/歌圖6.jpg" about="" title="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="./img/歌圖5.jpg" about="" title="">
+                    </a>
+                </div>
+
+            </div>
+            <div class="banner-arrow">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+
+
+
+
+    <hr class="every-end">
+    <div class="mas-titleall">
+        <h2 class="mas-title">職人精選</h2>
+        <p class="mas-titleworld">由Sonic Drank Can聘請隱於音樂場景中的音樂人、唱片騎師、樂評人寫下作品的聆聽評論或推薦心得，欣賞作品之餘不妨一讀達人們的觀點，或許會啟發你對歌曲的不同想像。
+        </p>
+        <div class="soundwave">
+            <img src="./img/update-unscreen.gif" alt="">
+        </div>
+    </div>
+    <div class="mas-allbox">
+
+
+
+
+        <div class="box1">
+            <div class="mas-box1top">
+                <div class="box1img" data-aos="zoom-in" data-aos-duration="1500">
+                    <img src="./img/首頁達人歌1.png" alt="">
+                </div>
+                <div class="box1world">
+                    Breathe (feat. Shizuka)
+                </div>
+                <div class="box1love">
+                    <i class="fas fa-heartbeat"></i> 24.1k
+                </div>
+            </div>
+            <hr class="box-hr">
+            <p class="mas-world">出身MI現旅居LA的吉他手Hans Tsai。去年對其印象為LINION之固定演出樂手。此月推出了個人首支單曲〈Breathe〉。於此曲中不難看出Tom
+                Misch對他音樂創作之影響。以Funk為基底，在聲響上則有更多LA風格的Future R&B色彩，整體繽紛而豐富。唯樂句編排稍顯線性而直觀了些。</p>
+        </div>
+        <div class="box2">
+            <div class="mas-box1top">
+                <div class="box1img" data-aos="zoom-in" data-aos-duration="1500">
+                    <img src="./img/首頁達人歌2.png" alt="">
+                </div>
+                <div class="box1world">
+                    Breathe (feat. Shizuka)
+                </div>
+                <div class="box1love">
+                    <i class="fas fa-heartbeat"></i> 16.8k
+                </div>
+            </div>
+            <hr class="box-hr">
+            <p class="mas-world">Song Credits:
+                Shizuka Hayashi - Vocal & Lyrics
+                LINION - Bass
+                Hans Tsai - Everything else.Composed, arranged, produced by Hans Tsai in a bedroom in Los Angeles.
+                Mixed by Tzu Yu Lin
+                Mastered by Matt Colton at Metropolis Studios
+                Artwork & Animation by Hung Fu Tsai
+                © 2020 Hans Tsai</p>
+        </div>
+        <div class="box3">
+            <div class="mas-box1top">
+                <div class="box1img" data-aos="zoom-in" data-aos-duration="1500">
+                    <img src="./img/首頁達人歌3.png" alt="">
+                </div>
+                <div class="box1world">
+                    談婚驚悚故事
+                </div>
+                <div class="box1love">
+                    <i class="fas fa-heartbeat"></i> 20.2k
+                </div>
+            </div>
+            <hr class="box-hr">
+            <p class="mas-world">驚人的進化成長！18年《生而為人的故事》已證明洪慈謙譜寫悅耳旋律的實力。歷經巡演與潛沉於生活中的靈感巧思，透過更多樂器搭配與音樂素材的運用，《The Opposite and
+                Inside-Out》以英語台語混雜搭配，藉由電子合成加上銅管樂元素輔助，輕柔女聲時而瘋狂時而恬靜唱出幽默諷刺的婚事小品。
+            </p>
+        </div>
+    </div>
+    <hr class="mas-end">
+
+
+    <div class="liveshow">
+        <h2>演出活動</h2>
+        <div class="liveimg" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-out-cubic">
+            <img src="./img/首頁演出活動圖.jpg" alt="">
+        </div>
+        <div class="liveshow-right">
+            <h2 class="liveshow-title" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-out-cubic">
+                2020!! Trio Fight三人合戰音樂節
+            </h2>
+            <div class="liveworld" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-out-cubic"
+                data-aos-delay="600">
+                仲秋物語・秋分｜薛丁格的貓 × 貳伍吸菸所｜苗栗場
+                演出｜薛丁格的貓 貳伍吸菸所
+                時間｜10/2（五）1830 Open／1900 Start
+                票價｜單人預售 $400／雙人預售 $700／四人限量套票 $1200（限定五套）／現場票 $500
+                地點｜沃野之音（苗栗市長春街 15 號，近苗栗市公所、市民廣場）
+            </div>
+            <div class="livego">
+                <a href="./liveshow.html">前往活動</a>
+            </div>
+        </div>
+    </div>
+    <hr class="liveshow-end">
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+        </div>
+        <div class="get1">
+            Get the app on iOS
+        </div>
+        <div class="get2">
+            and Android
+        </div>
+        <div class="footerworld1">
+            Explore radio shows, DJ mixes and podcasts
+        </div>
+        <div class="footerworld2">
+            made by passionate creators.
+        </div>
+        <div class="appget">
+            <div class="googleplay">
+                <img src="./img/google-play-badge.svg" alt="">
+            </div>
+            <div class="apple">
+                <img src="./img/applestore.jpg" alt="">
+            </div>
+        </div>
+        <div class="footerflw">
+            Follow Us
+        </div>
+        <div class="social-icon11">
+            <div>
+                <i class="fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-instagram fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-twitter fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+        </div>
+        <div class="footer-inf">
+            <div>
+                SUPPORT
+            </div>
+            <div>
+                ABOUT
+            </div>
+            <div>
+                TERMS USE
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- banner輪播 -->
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="./vendors/jqueryLayerSlider/layerslider.kreaturamedia.jquery.js"></script>
+    <script src="./vendors/jqueryLayerSlider/layerslider.transitions.js"></script>
+    <script src="./vendors/jqueryLayerSlider/greensock.js"></script>
+    <!-- aos套件 -->
+    <script src="./vendors/aos/js/aosjs.js"></script>
+
+    <!-- 大家都在聽輪播 -->
+    <script type="text/javascript" src="./vendors/jqueryswiperlbt/js/swiper.min.js"></script>
+    <!-- 背景彩帶 -->
+    <!-- <script src="./vendors/ribbon/ribbon.js"></script> -->
+    <!-- banner輪播JS -->
+    <script type="text/javascript">
+        var lsjQuery = jQuery;
+
+        lsjQuery(document).ready(function () {
+            if (typeof lsjQuery.fn.layerSlider == "undefined") {
+                lsShowNotice('layerslider_1', 'jquery');
+            } else {
+                lsjQuery(".banner").layerSlider({
+                    responsiveUnder: 800,
+                    layersContainer: 600,
+                    skinsPath: './vendors/jqueryLayerSlider/layerslider/skins/',
+                    autoStart: true,
+                    navStartStop: false,
+                    responsive: false,
+                    hoverPrevNext: false,
+                    thumbnailNavigation: false
+                });
+            }
+        });
+        lsjQuery('.banner').layerSlider('pause');
+    </script>
+
+
+
+    <!-- aos-JS -->
+    <script>
+        $(function () {
+            AOS.init();
+        });
+    </script>
+
+
+    <!-- 漢堡JS -->
+    <script>
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $(this).toggleClass("is-active");
+            });
+        });
+
+
+        $("button.hamburger").on("click", function () {
+            $("nav.rwd").slideToggle(function () {
+                $(document.body).toggleClass(`over`);
+            });
+            // $(document.body).css({
+            //     "overflow": "hidden",
+            // });
+
+            // let ans = $("nav.rwd").css("display");
+            // alert(ans)
+            // if ($("nav.rwd").css("display", "none")) {
+            //     $(document.body).css({
+            //         "overflow": "scroll",
+            //     });
+
+            // }
+        });
+
+    </script>
+
+    <!-- 大家都在聽JS -->
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var swiper = new Swiper('.swiper-container', {
+                autoplay: 3000, //是否自动滚动
+                speed: 500,      //滚动速速
+                autoplayDisableOnInteraction: true,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: 5, //当前选中
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                prevButton: '.swiper-button-prev', // 左右切换
+                nextButton: '.swiper-button-next', // 左右切换
+                onInit: function (swiper) {
+                    swiper.slides[3].className = "swiper-slide swiper-slide-active"; //当前选中 状态
+                },
+                breakpoints: {
+                    100: {
+                        slidesPerView: 0,
+                    }
+                }
+            });
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

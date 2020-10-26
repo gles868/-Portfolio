@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <!-- 漢堡套件 -->
+    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./vendors/aos/css/aoscss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./upload.css">
+</head>
+
+<body>
+    <!-- RWD導覽列 -->
+    <nav class="rwd">
+        <ul class="rwd-nav">
+            <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+            <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+            <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+            <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+            <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+            <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+        </ul>
+    </nav>
+    <!-- RWD導覽列 -->
+    <nav class="nav">
+        <div class="nav-box">
+            <div class="logo">
+                <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+            </div>
+            <div class="menu-all">
+                <button class="hamburger hamburger--emphatic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="menu-left">
+                    <ul class="menu">
+                        <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+                        <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+                        <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+                        <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+                        <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+                        <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+                    </ul>
+                </div>
+                <div class="menu-right">
+                    <ul class="search">
+                        <li><i class="fas fa-search fa-2x"></i></li>
+                        <li><i class="fas fa-cloud-upload-alt fa-2x"></i></li>
+                        <li><i class="fas fa-user-circle fa-2x"></i></li>
+                    </ul>
+
+                    <div class="search-bar">
+                        <div class="border-up-empty">
+                            <span></span>
+                        </div>
+                        <input type="text" placeholder="找音樂?">
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <header class="header">
+        <div>
+            管理音樂作品
+        </div>
+    </header>
+    <hr class="first-hr">
+    <div class="all-box">
+        <div class="management-left">
+            <div class="left-title">
+                管理音樂
+            </div>
+            <div>
+                <i class="fas fa-plus"></i> 新增專輯
+            </div>
+            <div>
+                所有歌曲
+            </div>
+        </div>
+        <div class="management-right">
+            <div class="man-in-left">
+                <div class="upload-img">
+                    <img src="./img/upload.png" alt="">
+                </div>
+                <div class="suggest">
+                    建議尺寸：500x500px 以上，圖片檔案大小不可超過 2MB
+                </div>
+                <div class="upload-img-a">
+                    上傳封面
+                </div>
+            </div>
+
+            <div class="man-in-from">
+                <input class="upload-name" type="text" placeholder="請輸入專輯名稱">
+                <div>
+                    發佈時間
+                </div>
+                <input class="upload-date" type="text" placeholder="2020/10/12">
+                <input class="upload-song-content" type="text" placeholder="請輸入專輯介紹文字">
+                <div>
+                    剩餘字元數:500
+                </div>
+                <div class="upload-song-a">
+                    發佈並上傳歌曲
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+        </div>
+        <div class="get1">
+            Get the app on iOS
+        </div>
+        <div class="get2">
+            and Android
+        </div>
+        <div class="footerworld1">
+            Explore radio shows, DJ mixes and podcasts
+        </div>
+        <div class="footerworld2">
+            made by passionate creators.
+        </div>
+        <div class="appget">
+            <div class="googleplay">
+                <img src="./img/google-play-badge.svg" alt="">
+            </div>
+            <div class="apple">
+                <img src="./img/applestore.jpg" alt="">
+            </div>
+        </div>
+        <div class="footerflw">
+            Follow Us
+        </div>
+        <div class="social-icon11">
+            <div>
+                <i class="fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-instagram fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-twitter fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+        </div>
+        <div class="footer-inf">
+            <div>
+                SUPPORT
+            </div>
+            <div>
+                ABOUT
+            </div>
+            <div>
+                TERMS USE
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="./vendors/ribbon/ribbon.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 漢堡JS -->
+    <script>
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $(this).toggleClass("is-active");
+            });
+        });
+
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $("nav.rwd").slideToggle();
+            });
+        });
+    </script>
+
+
+    <script>
+        $(`.search`).find(`li`).first().click(function () {
+            $(`.search-bar`).slideToggle();
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

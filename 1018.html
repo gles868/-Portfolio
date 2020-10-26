@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class="hamburger hamburger--emphatic is-active" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+            <ul class="ee">
+                <li>2123</li>
+                <li>12321321</li>
+                <li>12321321</li>
+                <li>12321321</li>
+            </ul>
+      </button>
+
+      <style>
+          /* .ee{
+              display: none;
+          } */
+      </style>
+      <script>
+          $(function(){
+            $("button.hamburger").on("click", function(){
+                $(this).toggleClass("is-active");
+            });
+          });
+
+
+          $(function(){
+            $("button.hamburger").on("click", function(){
+                $(".ee").slideToggle();
+                });
+            });
+      
+      </script>
+      
+</body>
+</html>

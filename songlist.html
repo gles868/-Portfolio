@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song-list</title>
+    <!-- 輪播套 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <!-- 漢堡套件 -->
+    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./songlistcss.css">
+
+
+</head>
+
+<body>
+    <!-- RWD導覽列 -->
+    <nav class="rwd">
+        <ul class="rwd-nav">
+            <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+            <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+            <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+            <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+            <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+            <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+        </ul>
+    </nav>
+    <!-- RWD導覽列 -->
+    <nav class="nav">
+        <div class="nav-box">
+            <div class="logo">
+                <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+            </div>
+            <div class="menu-all">
+                <button class="hamburger hamburger--emphatic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="menu-left">
+                    <ul class="menu">
+                        <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
+                        <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
+                        <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
+                        <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
+                        <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
+                        <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
+                    </ul>
+                </div>
+                <div class="menu-right">
+                    <ul class="search">
+                        <li><i class="fas fa-search fa-2x"></i></li>
+                        <li><i class="fas fa-cloud-upload-alt fa-2x"></i></li>
+                        <li><i class="fas fa-user-circle fa-2x"></i></li>
+                    </ul>
+
+                    <div class="search-bar">
+                        <div class="border-up-empty">
+                            <span></span>
+                        </div>
+                        <input type="text" placeholder="找音樂?">
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <div class="firsttheme1">
+
+        <div class="themeinbox">
+            <ul class="themetitle1">
+                <li>星期三-小周末之夜</li>
+                <li>大海航行靠舵手，鍵盤樂評Sonic Drink Can歌單都在這裡。</li>
+                <li>查看全部歌單</li>
+            </ul>
+            <div class="themesong">
+                <!-- <div class="th-firstsong">
+                    <div class="thimg1">
+                        <img src="../作品/img/主題星期三圖1.png" alt="">
+                    </div>
+                    <div class="firstsong-name">
+                        街角無常音樂祭
+                    </div>
+                    <div class="firstsong-mark">
+                        <i class="fas fa-bookmark"></i> 340
+                    </div>
+                    <hr>
+                    <p class="firstsong-time">
+                        發佈於2020年9月28號
+                    </p>
+                </div>
+                <div class="th-firstsong">
+                    <div class="thimg1">
+                        <img src="../作品/img/主題星期三圖3.png" alt="">
+                    </div>
+                    <div class="firstsong-name">
+                        海湧祭
+                    </div>
+                    <div class="firstsong-mark">
+                        <i class="fas fa-bookmark"></i> 340
+                    </div>
+                    <hr>
+                    <p class="firstsong-time">
+                        發佈於2020年9月28號
+                    </p>
+                </div>
+                <div class="th-firstsong">
+                    <div class="thimg1">
+                        <img src="../作品/img/星期三主題圖5.png" alt="">
+                    </div>
+                    <div class="firstsong-name">
+                        怪天氣 feat. 9m88
+                    </div>
+                    <div class="firstsong-mark">
+                        <i class="fas fa-bookmark"></i> 340
+                    </div>
+                    <hr>
+                    <p class="firstsong-time">
+                        發佈於2020年9月28號
+                    </p>
+                </div> -->
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="th-firstsong">
+                                <div class="thimg1">
+                                    <img src="../作品/img/主題星期三圖1.png" alt="">
+                                </div>
+                                <div class="firstsong-name">
+                                    街角無常音樂祭
+                                </div>
+                                <div class="firstsong-mark">
+                                    <i class="fas fa-bookmark"></i> 340
+                                </div>
+                                <hr>
+                                <p class="firstsong-time">
+                                    發佈於2020年9月28號
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="th-firstsong">
+                                <div class="thimg1">
+                                    <img src="../作品/img/主題星期三圖3.png" alt="">
+                                </div>
+                                <div class="firstsong-name">
+                                    海湧祭
+                                </div>
+                                <div class="firstsong-mark">
+                                    <i class="fas fa-bookmark"></i> 340
+                                </div>
+                                <hr>
+                                <p class="firstsong-time">
+                                    發佈於2020年9月28號
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="th-firstsong">
+                                <div class="thimg1">
+                                    <img src="../作品/img/星期三主題圖5.png" alt="">
+                                </div>
+                                <div class="firstsong-name">
+                                    怪天氣 feat. 9m88
+                                </div>
+                                <div class="firstsong-mark">
+                                    <i class="fas fa-bookmark"></i> 340
+                                </div>
+                                <hr>
+                                <p class="firstsong-time">
+                                    發佈於2020年9月28號
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Resize me!</div>
+                        <div class="swiper-slide">Resize me!</div>
+                        <div class="swiper-slide">Resize me!</div>
+                        <div class="swiper-slide">Resize me!</div>
+                        <div class="swiper-slide">Resize me!</div>
+                        <div class="swiper-slide">Resize me!</div>
+                        <div class="swiper-slide">Resize me!</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="firsttheme2">
+        <div class="">
+            <div class="themeinbox">
+                <ul class="themetitle1">
+                    <li>Chill一下-放鬆身心</li>
+                    <li>大海航行靠舵手，鍵盤樂評Sonic Drink Can歌單都在這裡。</li>
+                    <li>查看全部歌單</li>
+                </ul>
+                <div class="themesong">
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/星期三主題圖7.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            這該死的拘執佮愛
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 340
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月18號
+                        </p>
+                    </div>
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/主題星期三圖2.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            02.爛笑話
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 340
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月28號
+                        </p>
+                    </div>
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/這世界吵得只剩白歌.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            這世界吵的只剩白歌 </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 340
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月28號
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="firsttheme3">
+        <div class="">
+            <div class="themeinbox">
+                <ul class="themetitle1">
+                    <li>深夜推薦-失眠不孤單</li>
+                    <li>大海航行靠舵手，鍵盤樂評Sonic Drink Can歌單都在這裡。</li>
+                    <li>查看全部歌單</li>
+                </ul>
+                <div class="themesong">
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/狼 - Wolf.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            狼 - Wolf
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 380
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年10月8號
+                        </p>
+                    </div>
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/我們只在地球住幾晚.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            我們只在地球住幾晚
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 390
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月11號
+                        </p>
+                    </div>
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/我們不曾停下腳步.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            我們不曾停下腳步
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 300
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年10月2號
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="firsttheme4">
+        <div class="">
+            <div class="themeinbox">
+                <ul class="themetitle1">
+                    <li>Party-三五好友來相聚</li>
+                    <li>大海航行靠舵手，鍵盤樂評Sonic Drink Can歌單都在這裡。</li>
+                    <li>查看全部歌單</li>
+                </ul>
+                <div class="themesong">
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/傑森史塔森 X 三寶犯 ft. SmashRegz.png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            傑森史塔森 X 三寶犯
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 340
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月28號
+                        </p>
+                    </div>
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/Love Supreme (无上真爱).png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            Love Supreme (無上真愛)
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 340
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月28號
+                        </p>
+                    </div>
+                    <div class="th-firstsong">
+                        <div class="thimg1">
+                            <img src="../作品/img/Lighter & Ashes (打火機與灰燼).png" alt="">
+                        </div>
+                        <div class="firstsong-name">
+                            Lighter & Ashes (打火機與灰燼)
+                        </div>
+                        <div class="firstsong-mark">
+                            <i class="fas fa-bookmark"></i> 340
+                        </div>
+                        <hr>
+                        <p class="firstsong-time">
+                            發佈於2020年9月28號
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="liveshow-end">
+
+
+
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
+        </div>
+        <div class="get1">
+            Get the app on iOS
+        </div>
+        <div class="get2">
+            and Android
+        </div>
+        <div class="footerworld1">
+            Explore radio shows, DJ mixes and podcasts
+        </div>
+        <div class="footerworld2">
+            made by passionate creators.
+        </div>
+        <div class="appget">
+            <div class="googleplay">
+                <img src="./img/google-play-badge.svg" alt="">
+            </div>
+            <div class="apple">
+                <img src="./img/applestore.jpg" alt="">
+            </div>
+        </div>
+        <div class="footerflw">
+            Follow Us
+        </div>
+        <div class="social-icon11">
+            <div>
+                <i class="fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-instagram fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+            <div>
+                <i
+                    class="fab fa-twitter fa-3x fab fa-facebook-square fa-3x animate__animated animate__swing animate__infinite"></i>
+            </div>
+        </div>
+        <div class="footer-inf">
+            <div>
+                SUPPORT
+            </div>
+            <div>
+                ABOUT
+            </div>
+            <div>
+                TERMS USE
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 漢堡JS -->
+    <script>
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $(this).toggleClass("is-active");
+            });
+        });
+
+        $(function () {
+            $("button.hamburger").on("click", function () {
+                $("nav.rwd").slideToggle();
+            });
+        });
+    </script>
+
+
+    <script>
+        $(`.search`).find(`li`).first().click(function () {
+            $(`.search-bar`).slideToggle();
+        });
+    </script>
+
+
+    <!-- 輪播JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <!-- Initialize Swiper輪播 -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
+                }
+            }
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+    </script>
+</body>
+
+</html>

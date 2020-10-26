@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/aos/css/aoscss.css">
+</head>
+<body>
+
+    <style>
+        .top_block, .bottom_block{
+                height: 1000px;
+                border: 1px solid gray;
+                background-color: lightgray;
+}
+
+div.custom_block{
+  border: 1px solid red;
+  background-color: red;
+}
+    </style>
+    <div class="top_block">上面的內容</div>
+    <div class="custom_block" data-aos="zoom-out-down">測試的文字2</div>
+    <div class="bottom_block">底部的內容</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/aos/js/aosjs.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

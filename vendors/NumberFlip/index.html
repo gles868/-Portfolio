@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字翻转</title>
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+    <link rel="stylesheet" href="css/font-some.css" />
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+<div class="box">
+    <div class="chartNum">
+        <div class="box-items" id="TNum">
+            <li class="number-item"><span><i>0123456789</i></span></li>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var chartNum = ['0', '0', '0', '0', '0', '0','0','0'];     // 默认总数
+    start();
+    function start(){
+        var strHtml = "";
+        for(var i=0;i<chartNum.length;i++){
+            strHtml+= '<li class="number-item">\n' +
+                '                <span><i class="item" ref="numberItem">0123456789</i></span>\n' +
+                '            </li>';
+        }
+        $("#TNum").html(strHtml);
+
+        // 定时改变数字
+        setInterval(function setInt(){
+            toOrderNum('83747561');
+            setNumberTransform();
+        },2000)
+    }
+
+    function toOrderNum(num) {
+        num = num.toString()     // 数字变成字符串
+        if (num.length < 6) {  // 如未满位数，添加"0"补位
+            num = '0' + num
+            toOrderNum(num) // 递归添加"0"补位
+        } else if (num.length === 8) {      // 数中加入逗号
+            // num = num.slice(0, 2) + ',' + num.slice(2, 5) + ',' + num.slice(5, 8)
+            chartNum = num.split('') // 将其便变成数据
+        } else {
+            alert('显示异常');
+        }
+    }
+    function setNumberTransform(){
+        var numberItems = $('.item');
+        const numberArr = chartNum.filter(item => !isNaN(item));
+        for (var  index = 0; index < numberItems.length; index++) {
+            const elem = numberItems[index];
+            elem.style.transform = 'translate(-50%, -'+numberArr[index]  * 10 +'%)'
+        }
+    }
+</script>
+</body>
+</html>
