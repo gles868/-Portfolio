@@ -49,7 +49,7 @@ div.nav-box{
     background-color: #1f1f1f;
 }
 .hamburger{
-    z-index: 999;
+    z-index: 10000;
     position: fixed;
     top: 4.5%;
     right:0 ;
@@ -64,7 +64,7 @@ nav.rwd{
     /* left: 0; */
     background-color: #1f1f1fe7;
     display: none;
-    z-index: 998;
+    z-index: 9999;
 }
 .rwd-nav li{
     text-align: center;
