@@ -402,6 +402,7 @@ div.more{
     padding: 8px 15px;
     background-color: rgb(80, 67, 196);
     font-size: 8px;
+    cursor: pointer;
 }
 div.featurs{
     width: 88%;

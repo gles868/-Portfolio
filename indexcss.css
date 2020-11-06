@@ -3,18 +3,13 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0; 
-    /* outline: 1px solid yellow;  */
+    padding: 0;
+    /* outline: 1px solid yellow; */
 }
-
 body{
     background-color: #1f1f1f;
     font-family: 'Noto Sans TC', sans-serif;
 }
-.over{
-    overflow: hidden;
-}
-
 button.hamburger{
     display: none;
 }
@@ -40,7 +35,7 @@ div.logo  img{
 
 div.nav-box{
     /* border:1px solid blue; */
-    position: relative;
+    /* position: relative; */
     display: flex;
     width: 88%;
     margin: 0 auto;
@@ -49,26 +44,11 @@ div.nav-box{
     background-color: #1f1f1f;
 }
 .hamburger{
-    z-index: 10000;
-    position: fixed;
-    top: 4.5%;
-    right:0 ;
-}
-nav.rwd{
-    padding-top: 100px;
-    width: 100%;
-    height: 100vh;
-    /* border: 1px solid yellow; */
-    position: fixed;
-    /* top: 100px; */
-    /* left: 0; */
-    background-color: #1f1f1fe7;
-    display: none;
-    z-index: 9999;
-}
-.rwd-nav li{
-    text-align: center;
-    padding: 10px 0;
+    z-index: 500;
+    padding: 5px;
+    display: block;
+    margin: 19px auto 0 auto;
+    outline: none;
 }
 div.menu-all{
     display: flex;
@@ -95,6 +75,7 @@ div.menu-right{
     width: 15%;
     min-width: 140px;
     /* border: 1px solid yellow; */
+    position: relative;
 }
 div.menu-right > ul.search{
     list-style: none;
@@ -102,11 +83,72 @@ div.menu-right > ul.search{
     justify-content: space-between;
     color:rgb(216, 206, 206);
 }
+ul.search li{
+    cursor: pointer;
+}
+
+
+
 
 ul.search > li:nth-child(3){
     color:rgb(80, 67, 196);
+    
 }
 
+.search-bar{
+    position: absolute;
+    top:50px;
+    right:20px;
+    width: 200px;
+    height: 1px;
+    /* transition: height 0.8s; */
+    /* overflow: hidden; */
+    height:75px ;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color:rgb(26, 45, 52) ;
+    display: none;
+}
+
+.border-up-empty{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid gray;
+    position: absolute;
+    top:-11px;
+    left:85px;
+}
+.border-up-empty span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgb(26, 45, 52);
+    position: absolute;
+    left: -8px;
+    top: 3px;
+}
+
+.search-bar input{
+    display: block;
+    background-color:rgb(26, 45, 52) ;
+    outline: none;
+    width: 80%;
+    border: 1px solid rgb(80, 67, 196) ;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 20px auto;
+    color: honeydew;
+    font-size: 18px;
+}
+.search-bar input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
 
 
 
@@ -138,6 +180,7 @@ ul.menu a:hover::after{
     transform: translateX(-50%) scaleX(1);
     background-color: honeydew;
 }
+
 
 
 
@@ -521,7 +564,7 @@ div.social-icon11 div{
 }
 div.footer-inf{
     display: flex;
-    width: 330px;
+    width: 300px;
     color: honeydew;
     justify-content: space-between;
     margin: 30px auto;
@@ -557,6 +600,16 @@ div.footer-inf div{
 
 
   @media screen and (max-width: 767px){
+    .rwd--nav{
+        display: block;
+    }
+    div.menu-right{
+        /* display: none; */
+        /* border: 1px solid yellow; */
+        position: absolute;
+        top: 37px;
+        right: 15px;
+    } 
     div.liveshow{
       width: 540px;
     }
@@ -571,9 +624,6 @@ div.footer-inf div{
     }
     p.runhorse{
         font-size: 16px;
-    }
-    div.menu-right{
-        display: none;
     }
     .menu-left{
         display: none;
@@ -616,7 +666,7 @@ div.footer-inf div{
         font-size: 16px;
     }
     div.appget{
-        width: 330px;
+        width: 300px;
         flex-direction: column;
     }
     div.googleplay,div.apple{

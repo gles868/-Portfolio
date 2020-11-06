@@ -3,46 +3,88 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* outline: 1px solid yellow; */
 }
-
 body{
-    background-image: linear-gradient(-225deg, #0b0738 0%, #1f1d36 56%, #290738 100%);
+    background-color: #1f1f1f;
     font-family: 'Noto Sans TC', sans-serif;
 }
-
+button.hamburger{
+    display: none;
+}
 nav.nav{
     /* border:1px solid red; */
-    background-image: linear-gradient(-225deg, #0b0738 0%, #1f1d36 56%, #290738 100%);
+    background-color: #1f1f1f;
     padding: 30px 0 30px 0;
     box-shadow: 2px 2px 4px 3px rgb(1, 6, 26);  
 }
-
 div.logo{
     width: 130px;
     height: 40px;
+    min-width: 130px;
+    min-height: 40px;
     /* border: 1px solid black; */
+    vertical-align: top;
 }
 
-div.logo > img{
+div.logo  img{
     width: 100%;
     height: 100%;
 }
 
 div.nav-box{
     /* border:1px solid blue; */
+    /* position: relative; */
     display: flex;
-    align-items:flex-end;
-    justify-content: space-around; 
-    background-image: linear-gradient(-225deg, #0b0738 0%, #1f1d36 56%, #290738 100%);    
+    width: 88%;
+    margin: 0 auto;
+    /* align-items:flex-start; */
+    justify-content: space-between; 
+    background-color: #1f1f1f;
 }
-
+.hamburger{
+    z-index: 999;
+    position: fixed;
+    top: 4.5%;
+    right:0 ;
+}
+nav.rwd{
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid yellow; */
+    position: fixed;
+    /* top: 100px; */
+    left: 0;
+    background-color: #1f1f1fe7;
+    display: none;
+    z-index: 998;
+}
+.rwd-nav li{
+    text-align: center;
+    padding: 10px 0;
+}
+.rwd-nav li a{
+    text-decoration: none;
+    color: rgb(109, 117, 109);
+}
+.rwd-nav li a:hover{
+    color: honeydew;
+}
+div.menu-all{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    /* border: 1px solid yellow; */
+    align-items: flex-end;  
+}
 div.menu-left{
-    transform:translateX(-100px);
-    
+    width: 50%;
+    min-width: 400px;
+    /* border: 1px solid green; */
+    margin-left: 20px;
 }
-
 div.menu-left > ul.menu{
-    width: 500px;
     list-style: none;
     display: flex;
     /* border:1px solid blue; */
@@ -50,28 +92,81 @@ div.menu-left > ul.menu{
     color:rgba(172, 168, 141, 1);
     font-weight: bold;   
 }
-
-ul.menu li{
-    /* border:1px solid red; */
-}
-
 div.menu-right{
-    /* display: inline-block; */
-    /* border:1px solid green; */   
+    width: 15%;
+    min-width: 140px;
+    /* border: 1px solid yellow; */
+    position: relative;
 }
-
 div.menu-right > ul.search{
     list-style: none;
     display:flex;
-    width: 170px;
-    justify-content: space-around;
+    justify-content: space-between;
     color:rgb(216, 206, 206);
 }
+ul.search li{
+    cursor: pointer;
+}
+
+
+
 
 ul.search > li:nth-child(3){
     color:rgb(80, 67, 196);
+    
 }
 
+.search-bar{
+    position: absolute;
+    top:50px;
+    right:20px;
+    width: 200px;
+    height: 1px;
+    /* transition: height 0.8s; */
+    /* overflow: hidden; */
+    height:75px ;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color:rgb(26, 45, 52) ;
+    display: none;
+    z-index: 2;
+}
+
+.border-up-empty{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid gray;
+    position: absolute;
+    top:-11px;
+    left:85px;
+}
+.border-up-empty span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgb(26, 45, 52);
+    position: absolute;
+    left: -8px;
+    top: 3px;
+}
+
+.search-bar input{
+    display: block;
+    background-color:rgb(26, 45, 52) ;
+    outline: none;
+    width: 80%;
+    border: 1px solid rgb(80, 67, 196) ;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 20px auto;
+    color: honeydew;
+    font-size: 18px;
+    /* display: none; */
+}
 
 
 
@@ -103,6 +198,31 @@ ul.menu a:hover::after{
     transform: translateX(-50%) scaleX(1);
     background-color: honeydew;
 }
+
+
+
+
+
+
+.rwd-map{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+.rwd-map img{
+    width: 100%;
+}
+.circle-inf{
+    width: 5%;
+    height: 10%;
+    border: 1px solid yellow;
+    position: absolute;
+    top: 38%;
+    left: 12%;
+}
+
+
 
 
 
@@ -181,7 +301,7 @@ ul.menu a:hover::after{
     height: 100%;
     content: '';
     display: block;
-    opacity: .6;
+    opacity: .3;
     background-color: #000;
     /* -webkit-backface-visibility: hidden; */
             backface-visibility: hidden;
@@ -273,6 +393,8 @@ ul.menu a:hover::after{
   font-weight: 300;
 }
 
+
+
 @media screen and (max-width: 64rem){
   .col{
     width: calc(33.333333% - 2rem);
@@ -316,7 +438,7 @@ div.hot-singer{
     font-weight: bold;
     font-size: 36px;
     /* border: 1px solid yellow; */
-    width:1200px;
+    width:88%;
     margin-bottom: 30px;
 }
 div.focusline-right{
@@ -330,8 +452,9 @@ div.focusline-right{
     background-repeat: no-repeat;
     /* border: 1px solid yellow; */
     position: absolute;
-    right: 0;
+    right: 0;  
 }
+
 div.focusline-left{
     width: 300px;
     height: 16px;
@@ -347,25 +470,29 @@ div.focusline-left{
 
 div.word-map{
     margin: 8px auto 0 auto;
-    background-image:url('./img/wordmap.png');
-    background-repeat:no-repeat;
+    /* background-image:url('./img/wordmap.png'); */
+    /* background-repeat:no-repeat; */
     width: 100%;
-    max-width: 1262px;
-    height: 580px;
+    /* max-width: 1262px; */
+    /* height: 90%; */
     /* border: 1px solid yellow; */
-    background-color: rgb(143, 153, 143);
-    background-size: 100%;
+    /* background-color: rgb(143, 153, 143); */
+    /* background-size: 100%; */
     position: relative;
 }
+div.word-map img{
+    width: 100%;
+    height: 100%;
+}
 div.singer1{
-    width: 80px;
-    height: 80px;
+    width: 6.6%;
+    height: 13%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:50px;
-    left:90px;
+    top:7%;
+    left:7%;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
 }
@@ -374,14 +501,14 @@ div.singer1 img{
     height: 100%;
 }
 div.singer2{
-    width: 100px;
-    height: 100px;
+    width: 8.6%;
+    height: 16.5%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:130px;
-    left:150px;
+    top:19%;
+    left:13%;
     animation-delay: .3s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -391,14 +518,14 @@ div.singer2 img{
     height: 100%;
 }
 div.singer3{
-    width: 60px;
-    height: 60px;
+    width: 4.6%;
+    height: 9%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:230px;
-    left:520px;
+    top:37%;
+    left:42%;
     animation-delay: .6s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -408,14 +535,14 @@ div.singer3 img{
     height: 100%;
 }
 div.singer4{
-    width: 120px;
-    height: 120px;
+    width: 10%;
+    height: 19.5%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:140px;
-    right:300px;
+    top:22%;
+    left:67%;
     animation-delay: .9s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -425,14 +552,14 @@ div.singer4 img{
     height: 100%;
 }
 div.singer5{
-    width: 90px;
-    height: 90px;
+    width: 6.6%;
+    height: 13%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:70px;
-    right:200px;
+    top:10%;
+    left:80%;
     animation-delay: 1.2s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -442,14 +569,14 @@ div.singer5 img{
     height: 100%;
 }
 div.singer6{
-    width: 80px;
-    height: 80px;
+    width: 6.6%;
+    height: 13%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:60px;
-    right:450px;
+    top:9%;
+    left:59%;
     animation-delay: 1.4s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -459,14 +586,14 @@ div.singer6 img{
     height: 100%;
 }
 div.singer7{
-    width: 60px;
-    height: 60px;
+    width: 4.6%;
+    height: 9.2%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:50px;
-    right: 90px;
+    top:73%;
+    left: 82%;
     animation-delay: 1.4s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -476,14 +603,14 @@ div.singer7 img{
     height: 100%;
 }
 div.singer8{
-    width: 100px;
-    height: 100px;
+    width: 8.6%;
+    height: 16.5%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:200px;
-    right:560px;
+    top:46%;
+    left:48%;
     animation-delay: 1.6s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -493,14 +620,14 @@ div.singer8 img{
     height: 100%;
 }
 div.singer9{
-    width: 80px;
-    height: 80px;
+    width: 6.6%;
+    height: 13%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:90px;
-    right:550px;
+    top:70%;
+    left:50%;
     animation-delay: 1.9s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -510,14 +637,14 @@ div.singer9 img{
     height: 100%;
 }
 div.singer10{
-    width: 120px;
-    height: 120px;
+    width: 10%;
+    height: 19.5%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:50px;
-    left:230px;
+    top:70%;
+    left:25%;
     animation-delay: 1s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -527,14 +654,14 @@ div.singer10 img{
     height: 100%;
 }
 div.singer11{
-    width: 60px;
-    height: 60px;
+    width: 4.6%;
+    height: 9.2%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:10px;
-    left:420px;
+    top:2%;
+    left:33%;
     animation-delay: 1.5s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -544,14 +671,14 @@ div.singer11 img{
     height: 100%;
 }
 div.singer12{
-    width: 60px;
-    height: 60px;
+    width: 4.6%;
+    height: 9.2%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:90px;
-    left:630px;
+    top:15%;
+    left:51%;
     animation-delay: 1.8s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -561,14 +688,14 @@ div.singer12 img{
     height: 100%;
 }
 div.singer13{
-    width: 80px;
-    height: 80px;
+    width: 5.8%;
+    height: 11.3%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:180px;
-    left:690px;
+    top:28%;
+    left:56%;
     animation-delay: 1.3s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -578,14 +705,14 @@ div.singer13 img{
     height: 100%;
 }
 div.singer14{
-    width: 40px;
-    height: 40px;
+    width: 3.8%;
+    height: 7.8%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:90px;
-    left:290px;
+    top:11%;
+    left:24%;
     animation-delay: 2.1s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -595,14 +722,14 @@ div.singer14 img{
     height: 100%;
 }
 div.singer15{
-    width: 50px;
-    height: 50px;
+    width: 3.8%;
+    height: 7.6%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    top:30px;
-    right:350px;
+    top:5%;
+    left:69%;
     animation-delay: 2.1s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -612,14 +739,14 @@ div.singer15 img{
     height: 100%;
 }
 div.singer16{
-    width: 50px;
-    height: 50px;
+    width: 6.6%;
+    height: 13%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:190px;
-    left:230px;
+    top:53%;
+    left:23%;
     animation-delay: 2.1s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -629,14 +756,14 @@ div.singer16 img{
     height: 100%;
 }
 div.singer17{
-    width: 70px;
-    height: 70px;
+    width: 6.6%;
+    height: 12.8%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:190px;
-    right:190px;
+    top:53%;
+    left:74%;
     animation-delay: 2.4s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -646,14 +773,14 @@ div.singer17 img{
     height: 100%;
 }
 div.singer18{
-    width: 50px;
-    height: 50px;
+    width: 3.8%;
+    height: 7.8%;
     border: 2px solid gray;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    bottom:300px;
-    left:90px;
+    top:35%;
+    left:21%;
     animation-delay: 2.4s;
     animation-duration: .3s;
     box-shadow:5px 5px 15px rgb(231, 7, 26);padding:0px;
@@ -910,7 +1037,7 @@ div.people-title{
     font-size: 44px;
     font-weight: bold;
     color: honeydew;
-    width: 500px;
+    width: 88%;
     margin: 30px auto 30px auto;
     /* border: 1px solid yellow; */
     text-align: center;
@@ -924,10 +1051,9 @@ div.contbox{
     height: 400px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     justify-content: space-around;
-    margin: 20px auto 20px auto;
+    margin: 20px auto 70px auto;
     /* border: 1px solid yellow; */
 }
 div.contbox div{
@@ -938,10 +1064,15 @@ div.contbox div{
 
 
 
+footer.footer{
+    /* border: 1px solid yellow; */
+    width: 88%;
+    margin: 200px auto 0 auto;
+}
 div.footer-logo{
     width: 210px;
-    height: 60px;
-    margin: 120px auto 80px;
+    height: 67px;
+    margin: 0 auto 80px;
 }
 div.footer-logo img{
     width: 100%;
@@ -956,7 +1087,7 @@ div.get1,div.get2,div.footerflw{
     font-size: 28px;
 }
 div.footerworld1,div.footerworld2{
-    width: 500px;
+    width: 88%;
     margin: 20px auto 40px;
     text-align: center;
     color:honeydew;
@@ -969,21 +1100,24 @@ div.appget{
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid yellow; */
 }
 div.googleplay{
     width: 200px;
+    cursor: pointer;
 }
 div.googleplay img{
     width: 100%;
 }
 div.apple{
-    width: 175px;
+    width: 155px;
     height: 60px;
     border: 1px solid lightgray;
     border-radius: 10px;
     overflow: hidden;
     padding: 5px;
     background-color: black;
+    cursor: pointer;
     
 }
 div.apple img{
@@ -997,11 +1131,86 @@ div.social-icon11{
     color:honeydew;
     margin: 0 auto;
 }
+div.social-icon11 div{
+    cursor: pointer;
+}
 div.footer-inf{
     display: flex;
-    width: 350px;
+    width: 330px;
     color: honeydew;
     justify-content: space-between;
     margin: 30px auto;
     font-weight: bold;
+}
+div.footer-inf div{
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1199px){ 
+    /* .word-map{
+        display: none;
+    }
+    .rwd-map{
+        display: block;
+    }     */
+
+}
+@media screen and (max-width: 991px){
+    .small-all{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 767px){
+  button.hamburger{
+      display: block;   
+  }
+  div.menu-right{
+      display: none;
+  }
+  .menu-left{
+      display: none;
+  }
+  
+}
+  
+
+
+
+@media screen and (max-width: 575px){
+  div.footerworld1,div.footerworld2{
+      min-width: 100%;
+      font-size: 16px;
+  }
+  div.appget{
+      width: 300px;
+      flex-direction: column;
+  }
+  div.googleplay,div.apple{
+      margin: 10px auto;
+  }
+  .number-item{
+    width: 30px;
+    height: 50px;
+    font-size: 44px;
+  }
+  div.contbox{
+    width: 300px;
+    height: 300px;
+  }
+  div.contbox div{
+      font-size: 16px;
+  }
+  div.singer1,div.singer2,div.singer3,div.singer4,div.singer5,div.singer6,div.singer7,div.singer8,div.singer9,div.singer10,div.singer11,div.singer12,div.singer13,div.singer14,div.singer15,div.singer16,div.singer17{
+       border: 0px solid gray; 
+  }
+  .singer-bg{
+      display: none;
+  }
+  div.focusline-right,div.focusline-left{
+      width: 150px;
+  }
 }

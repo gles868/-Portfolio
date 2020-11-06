@@ -201,7 +201,7 @@ ul.menu a:hover::after{
 
 div.firsttheme1{
     /* border: 10px solid black; */
-    background-image:url('../作品/img/滿版主題圖1.png');
+    background-image:url('./img/滿版主題圖1.png');
     background-repeat:no-repeat;
     background-size: cover;
     /* background-position: center center; */
@@ -210,7 +210,7 @@ div.firsttheme1{
     background-color: rgb(175, 111, 11);
 }
 div.themeinbox{
-    width: 825px;
+    width: 64%;
     /* border:3px solid red; */
     margin: 0 auto 0 34%;
 }
@@ -218,9 +218,8 @@ div.themeinbox{
 ul.themetitle1{
     /* border:3px solid green; */
     width:100%;
-    height: 200px;
     padding-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     list-style: none; 
 }
 ul.themetitle1 li:nth-child(1){
@@ -231,13 +230,13 @@ ul.themetitle1 li:nth-child(1){
 }
 ul.themetitle1 li:nth-child(2){
     color: honeydew;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-bottom: 20px;
 }
 ul.themetitle1 li:nth-child(3){
     color: honeydew;
     border: 1px solid gray;
-    font-weight: bold;
+    /* font-weight: bold; */
     width: 130px;
     padding: 5px 10px;
     border-radius: 10px;
@@ -256,16 +255,15 @@ div.themesong{
 }
 div.th-firstsong{
     border: 1px solid black;
-    width: 250px;
     height: 100%;
     border-radius: 10px;
     background-color: rgba(26, 45, 52, 1);
 }
 div.thimg1{
     /* border: 1px solid honeydew; */
-    width: 190px;
-    height: 190px;
-    margin: 30px auto 10px auto;
+    width: 180px;
+    height: 180px;
+    margin: 30px 30px 10px 30px;
 }
 div.thimg1 img{
     width: 100%;
@@ -305,7 +303,7 @@ p.firstsong-time{
 }
 div.firsttheme2{
     /* border: 10px solid black; */
-    background-image:url('../作品/img/滿版主題2背景圖.png');
+    background-image:url('./img/滿版主題2背景圖.png');
     background-repeat:no-repeat;
     background-size: cover;
     /* background-position: center center; */
@@ -315,7 +313,7 @@ div.firsttheme2{
 }
 div.firsttheme3{
     /* border: 10px solid black; */
-    background-image:url('../作品/img/滿版主題3背景圖.png');
+    background-image:url('./img/滿版主題3背景圖.png');
     background-repeat:no-repeat;
     background-size: cover;
     /* background-position: center center; */
@@ -325,7 +323,7 @@ div.firsttheme3{
 }
 div.firsttheme4{
     /* border: 10px solid black; */
-    background-image:url('../作品/img/滿版主題4背景圖.png');
+    background-image:url('./img/滿版主題4背景圖.png');
     background-repeat:no-repeat;
     background-size: cover;
     /* background-position: center center; */
@@ -336,7 +334,7 @@ div.firsttheme4{
 hr.liveshow-end{
     display: block;
     margin: 70px auto;
-    width: 1000px;
+    width: 88%;
     border-top:1px solid rgba(153, 153, 153, 0.233); 
     border-right:0px; 
     border-bottom:0px; 
@@ -417,7 +415,7 @@ div.social-icon11 div{
 }
 div.footer-inf{
     display: flex;
-    width: 330px;
+    width: 300px;
     color: honeydew;
     justify-content: space-between;
     margin: 30px auto;
@@ -437,7 +435,6 @@ div.footer-inf div{
     text-align: center;
     font-size: 18px;
     /* background-color: #fff; */
-
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -454,14 +451,68 @@ div.footer-inf div{
   }
   
 
-  @media (max-width: 760px) {
-    .swiper-button-next {
-      right: 20px;
-      transform: rotate(90deg);
-    }
 
-    .swiper-button-prev {
-      left: 20px;
-      transform: rotate(90deg);
+
+  @media screen and (max-width: 1199px){
+    div.thimg1{
+        width: 150px;
+        height:150px ;
     }
+  }
+
+
+  @media screen and (max-width: 991px){
+    .firstsong-name,.firstsong-mark,.firstsong-time{
+        font-size: 14px;
+    }
+    div.thimg1{
+        width:180px ;
+        height: 180px;
+    }
+    div.themeinbox{
+        width: 88%;
+        margin: 0 auto;
+    }
+  }
+  
+
+  @media screen and (max-width: 767px){
+    div.menu-right{
+        display: none;
+    }
+    .menu-left{
+        display: none;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    button.hamburger{
+        display: block;   
+    }
+    ul.themetitle1 li:nth-child(1){
+        font-size: 30px;
+    }
+    
+    
+}
+
+
+  @media screen and (max-width: 575px){
+    div.footerworld1,div.footerworld2{
+        min-width: 100%;
+        font-size: 16px;
+    }
+    div.appget{
+        width: 300px;
+        flex-direction: column;
+    }
+    div.googleplay,div.apple{
+        margin: 10px auto;
+    }
+    div.thimg1{
+        width:150px ;
+        height: 150px;
+        margin: 30px 30px 10px 30px;
+    }
+    
   }

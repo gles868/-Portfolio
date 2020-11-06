@@ -184,176 +184,290 @@ ul.menu a:hover::after{
 
 
 
-
-header.header{
+.backimg{
+    width: 100%;
+    height: 220px;
+    /* border: 1px solid green; */
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    position: absolute;
+    z-index: -1;
+    /* border: 1px solid blue; */
+}
+.main-onepart{
     width: 88%;
-    margin: 0 auto;
     /* border: 1px solid yellow; */
-    margin-top: 50px;
-    color: honeydew;
-    font-size: 24px;
-}
-hr.first-hr{
-    display: block;
-    margin: 30px auto;
-    width: 88%;
-    border-top:1px solid rgba(153, 153, 153, 0.233); 
-    border-right:0px; 
-    border-bottom:0px; 
-    border-left:0px;
-}
-div.all-box{
-    width: 88%;
     margin: 0 auto;
-    /* border: 1px solid yellow; */
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
 }
-div.management-left{
-    padding: 20px;
-    display: inline-block;
+.creator-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.creator-img img{
+    width: 100%;
+    height: 100%;
+}
+.creator-inf{
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.creator-inf-up{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    margin-bottom: 40px;
+}
+.creator-name{
+    font-size: 38px;
+    color: rgb(236, 233, 233);
+}
+.creator-place{
+    font-size: 22px;
+    color: rgb(233, 225, 225);
+}
+.follow{
+    width: 80px;
+    height: 40px;
     border: 1px solid gray;
-    border-radius: 10px;
-    background-color:rgb(26, 45, 52) ;
-    width: 18%;
-    /* height: 20; */
-    vertical-align: top;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color:rgb(80, 67, 196) ;
+    text-align: center;
+    color: rgb(236, 233, 233);
 }
-div.left-title{
-    color: honeydew;
-    font-size: 24px;
+.creator-inf-down{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.down-inf{
+    display: inline-block;
+    margin-left: 30px;
+}
+.inf-title{
+    font-size: 18px;
+    color: rgb(236, 233, 233);
+}
+.inf-num{
+    font-size: 36px;
+    color: rgb(236, 233, 233);
     font-weight: bold;
 }
-div.management-left div{
-    margin: 0 auto 20px auto;
-    color: honeydew;
-    cursor: pointer;
-}
-div.management-left div:hover{
-    color: rgb(80, 67, 196);
-}
-div.management-right{
-    display: inline-block;
-    width: 77%;
-    /* height: 580px; */
-    margin-left: 30px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    background-color:rgb(26, 45, 52) ;
-}
-div.man-in-left{
-    display: inline-block;
-    width: 22%;
-    /* height: 45%; */
-    /* border: 1px solid yellow; */
-    margin: 30px 30px 0 30px;
-}
-div.upload-img{
-    width: 100%;
-    /* height: 35vh; */
-    /* border: 1px solid gray; */
-    /* border-radius: 10px; */
-    overflow: hidden;
-}
-div.upload-img img{
-    width: 100%;
-    min-height: 100%;
-}
-div.suggest{
-    width: 100%;
-    color:rgb(190, 180, 180);
-    font-size: 14px;
-}
-div.upload-img-a{
-    border: 1px solid gray;
-    color: honeydew;
-    width: 90px;
-    border-radius: 8px;
-    padding: 5px 10px;
-    text-align: center;
-    margin-top: 5px;
-    background-color:rgb(80, 67, 196) ;
-    cursor:pointer;
-    font-size: 16px;
-}
-div.man-in-from{
-    /* border: 1px solid yellow; */
-    display: inline-block;
-    width: 66%;
-    vertical-align: top;
+hr.part-end{
+    display: block;
+    margin: 0 auto;
     margin-top: 30px;
-    color: honeydew;
-}
-input.upload-name{
-    width: 100%;
     margin-bottom: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color:rgb(16, 28, 32) ;
-    /* cursor:pointer; */
-    outline-style: none ;
-    font-size: 16px;
-    color: honeydew;
-}
-input.upload-date{
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color:rgb(16, 28, 32) ;
-    /* cursor:pointer; */
-    outline-style: none ;
-    font-size: 16px;
-    color: honeydew;
-}
-input.upload-song-content{
-    width: 100%;
-    /* height: 260px; */
-    margin-bottom: 20px;
-    padding: 5px 5px 240px 5px;
-    border-radius: 5px;
-    background-color:rgb(16, 28, 32) ;
-    /* cursor:pointer; */
-    outline-style: none ;
-    font-size: 16px;
-    color: honeydew;
-}
-.management-right input:focus{
-    border-color: #66afe9;
-    outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
-}
-div.upload-song-a{
-    border: 1px solid gray;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    cursor:pointer;
-    width: 130px;
-    text-align: center;
-    padding: 5px;
-    background-color:rgb(80, 67, 196) ;
-}
-hr{
-    display: block;
-    margin: 90px auto;
     width: 88%;
     border-top:1px solid rgba(153, 153, 153, 0.233); 
     border-right:0px; 
     border-bottom:0px; 
     border-left:0px;
 }
+.song-mark{
+    font-size: 26px;
+    color: rgb(236, 233, 233);
+    width: 88%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
 
 
 
 
 
+.lea-song-list{
+    display: inline-block;
+    border-radius: 10px;
+    width: 55%;
+    margin-left: 6%;
+    border: 1px solid gray;
+    background-color: rgb(26, 45, 52);
+    padding: 10px 20px;
+}
+div.song-line{
+    padding: 15px;
+    display: flex;
+    /* border: 1px solid yellow; */
+    align-content:center;
+    align-items:center;
+}
+div.lea-img{
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(35, 3, 53);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+div.lea-img img{
+    width: 100%;
+    height: 100%;
+}
+div.num{
+    font-size: 20px;
+    color: honeydew;
+    /* border: 1px solid yellow; */
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+div.song-name{
+    /* width: 400px; */
+    color: rgb(186, 202, 186);
+    font-weight: bold;
+    /* border: 1px solid yellow; */
+    margin-right: 10px;
+    flex-grow:1;
+}
+div.add{
+    color: rgb(80, 67, 196);
+    text-align: center;
+    padding-top: 1px;
+    min-width: 30px;
+    min-height: 30px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-right: 15px;
+    display: none;
+    cursor: pointer;
+}
+
+/* 歌曲hover後 */
+.song-line-hover{
+    background-color: #444444b7;
+}
+
+/* 歌曲hover後 */
+
+div.heart{
+    width: 90px;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    color: honeydew;
+    font-size: 18px;
+    background-color:rgb(26, 45, 52) ;
+    text-align: center;
+    margin-right: 10px;
+}
+div.play{
+    color: rgb(80, 67, 196);
+    font-size: 30px;
+    cursor: pointer;
+    /* border:1px solid yellow; */
+}
+hr.songlist-hr{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border-top:1px solid rgba(153, 153, 153, 0.233); 
+    border-right:0px; 
+    border-bottom:0px; 
+    border-left:0px;
+}
+div.song-name span{
+    /* border: 1px solid yellow; */
+    font-weight: normal;
+    color: rgb(164, 168, 164);
+}
+.trace{
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    /* border: 1px solid yellow; */
+    
+}
+.show-re{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid gray;
+    background-color: rgb(26, 45, 52);
+    border-radius: 10px;
+    padding: 20px 20px;
+    vertical-align: top;
+}
+
+.creator-small{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+.creator-small img{
+    width: 100%;
+    height: 100%;
+}
+.Past-events{
+    display: inline-block;
+    width: 60%;
+    color: rgb(236, 233, 233);
+    vertical-align: top;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.Past-events-time{
+    font-size: 14px;
+    color: rgb(164, 168, 164);
+}
+.show_small{
+    display: inline-block;
+}
+.show-Past-events{
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(236, 233, 233);
+}
+.show-Past-events-time{
+    font-size: 14px;
+    color: rgb(164, 168, 164);
+}
+.song_small{
+    width: 270px;
+    height: 270px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.song_small img{
+    width: 100%;
+    height: 100%;
+}
+.song-Past-events{
+    width: 100%;
+    color: rgb(236, 233, 233);
+}
+.feat{
+    /* border: 1px solid yellow; */
+    width: 270px;
+    margin: 0 auto;
+}
 
 
 
+.end_hr{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 88%;
+    border-top:1px solid rgba(153, 153, 153, 0.233); 
+    border-right:0px; 
+    border-bottom:0px; 
+    border-left:0px;
+}
 footer.footer{
     /* border: 1px solid yellow; */
     width: 88%;
     margin: 0 auto;
+    margin-top: 80px;
 }
 div.footer-logo{
     width: 210px;
@@ -436,26 +550,38 @@ div.footer-inf div{
 
 
 
+
+
+
+
 @media screen and (max-width: 1199px){ 
-    div.upload-img{
-        /* height: 165px; */
+    .creator-inf{
+        width: 70%;
     }
 
 }
 @media screen and (max-width: 991px){
-    div.upload-img{
-        /* height: 145px; */
+    .creator-img{
+        width: 200px;
+        height: 200px;
     }
-    div.left-title{
-        font-size: 20px;
+    .lea-song-list{
+        display: block;
+        width: 88%;
     }
-    div.management-right{
-        margin-left: 10px;
+    .trace{
+        display: block;
+        width: 88%;
+        margin: 0 auto;
+        margin-top: 30px;
     }
-    div.man-in-left{
-        margin-left: 20px;
+    .show-re{
+        margin: 0;
+        margin-bottom: 30px;
     }
-    
+    .show_small{
+        display: block;
+    }
 
 }
 @media screen and (max-width: 767px){
@@ -466,8 +592,6 @@ div.footer-inf div{
       display: block;
   }
   div.menu-right{
-      /* display: none; */
-      /* border: 1px solid yellow; */
       position: absolute;
       top: 37px;
       right: 15px;
@@ -475,29 +599,23 @@ div.footer-inf div{
   .menu-left{
       display: none;
   }
-  div.management-left{
-      width: 100%;
-      margin-bottom: 30px;
+  .heart{
+      display: none;
   }
-  div.management-right{
-      width: 100%;
-      margin-left: 0;
+  .main-onepart{
+      flex-direction: column;
   }
-  div.upload-img-a{
-      font-size: 12px;
+  .creator-img{
+      width: 270px;
+      height: 270px;
+      margin: 0 auto;
+      margin-bottom: 20px;
   }
-  div.man-in-left{
-      width: 90%;
-      display: block;
-      margin: 30px auto ;
+  .creator-inf{
+      margin: 0 auto;
   }
-  div.upload-img{
-      height: 100%;
-  }
-  div.man-in-from{
-      width: 90%;
-      display: block;
-      margin: 0 auto ;
+  .backimg{
+      height: 600px;
   }
 }
   
@@ -516,7 +634,5 @@ div.footer-inf div{
   div.googleplay,div.apple{
       margin: 10px auto;
   }
-  div.upload-img{
-    /* height: 115px; */
- } 
+  
 }
