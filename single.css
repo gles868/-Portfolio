@@ -71,7 +71,7 @@ div.menu-left > ul.menu{
     font-weight: bold;   
 }
 div.menu-right{
-    width: 15%;
+    width: 140px;
     min-width: 140px;
     /* border: 1px solid yellow; */
     position: relative;
@@ -240,7 +240,7 @@ ul.menu a:hover::after{
     /* border: 1px solid pink; */
     font-size: 0;
     /* display: flex; */
-    align-self: flex-end;
+    align-self: center;
 }
 .play_times{
     display: inline-block;
@@ -393,7 +393,7 @@ div.play_num,div.likes_num{
     margin-bottom: 5px;
 }
 .long2{
-    height: 430px;
+    height: 540px;
     transition: 1s;
     -webkit-transition: 1s;
 }
@@ -482,6 +482,10 @@ div.play_num,div.likes_num{
     background-color:rgb(80, 67, 196) ;
     color: rgb(236, 233, 233);
     cursor: pointer;
+}
+.main a{
+    text-decoration:none;
+    color: rgb(236, 233, 233);
 }
 
 
@@ -629,6 +633,10 @@ div.footer-inf div{
     .single-icon{
         width: 23%;
         margin-left: 20px;
+        transform: translateY(30px);
+    }
+    .long{
+        height: 395px;
     }
 }
 @media screen and (max-width: 991px){
@@ -646,9 +654,14 @@ div.footer-inf div{
     .single-icon{
         width: 25%;
         margin-left: 20px;
+        align-self: flex-end;
+        transform: translateY(0);
     }
     div.play_num,div.likes_num{
         font-size: 30px;
+    }
+    .long{
+        height: 405px;
     }
 }
 @media screen and (max-width: 782px){
@@ -696,7 +709,10 @@ div.footer-inf div{
         width: 100%;
     }
     .backimg{
-        height: 870px;
+        padding-top: 126%;
+    }
+    .long{
+        height: 415px;
     }
 }
 @media screen and (max-width: 575px){
@@ -725,6 +741,10 @@ div.footer-inf div{
         width: 100%;
     }
     .backimg{
-        height: 790px;
+        padding-top: 176%;
     }
+    .long{
+        height: 435px;
+    }
+    
   }

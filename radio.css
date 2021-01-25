@@ -9,9 +9,6 @@ body{
     background-color: #1f1f1f;
     font-family: 'Noto Sans TC', sans-serif;
 }
-button.hamburger{
-    display: none;
-}
 nav.nav{
     /* border:1px solid red; */
     background-color: #1f1f1f;
@@ -42,35 +39,6 @@ div.nav-box{
     justify-content: space-between; 
     background-color: #1f1f1f;
 }
-.hamburger{
-    z-index: 999;
-    position: fixed;
-    top: 4.5%;
-    right:0 ;
-}
-nav.rwd{
-    padding-top: 100px;
-    width: 100%;
-    height: 100vh;
-    /* border: 1px solid yellow; */
-    position: fixed;
-    /* top: 100px; */
-    left: 0;
-    background-color: #1f1f1fe7;
-    display: none;
-    z-index: 998;
-}
-.rwd-nav li{
-    text-align: center;
-    padding: 10px 0;
-}
-.rwd-nav li a{
-    text-decoration: none;
-    color: rgb(109, 117, 109);
-}
-.rwd-nav li a:hover{
-    color: honeydew;
-}
 div.menu-all{
     display: flex;
     justify-content: space-between;
@@ -93,7 +61,7 @@ div.menu-left > ul.menu{
     font-weight: bold;   
 }
 div.menu-right{
-    width: 15%;
+    width: 140px;
     min-width: 140px;
     /* border: 1px solid yellow; */
     position: relative;
@@ -103,6 +71,7 @@ div.menu-right > ul.search{
     display:flex;
     justify-content: space-between;
     color:rgb(216, 206, 206);
+    
 }
 ul.search li{
     cursor: pointer;
@@ -129,6 +98,7 @@ ul.search > li:nth-child(3){
     border-radius: 5px;
     background-color:rgb(26, 45, 52) ;
     display: none;
+    z-index: 99;
 }
 
 .border-up-empty{
@@ -161,10 +131,14 @@ ul.search > li:nth-child(3){
     border: 1px solid rgb(80, 67, 196) ;
     border-radius: 10px;
     padding: 5px 10px;
-    margin: 20px auto;
+    margin: 15px auto;
     color: honeydew;
     font-size: 18px;
-    /* display: none; */
+}
+.search-bar input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
 }
 
 
@@ -205,6 +179,7 @@ ul.menu a:hover::after{
 
 
 
+
 .big-box{
     display: flex;
     flex-wrap: wrap;
@@ -221,7 +196,7 @@ ul.menu a:hover::after{
 .box{
     position: relative;
     width: 40%;
-    height: 350px;
+    height: 440px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +215,7 @@ ul.menu a:hover::after{
 
 }
 .box:hover{
-    height: 400px;
+    height: 480px;
 }
 .box .imgBox img{
     width:100%;
@@ -333,10 +308,37 @@ div.dj-banner{
     width: 88%;
     /* height: 635px; */
     margin: 30px auto 0 auto;
+    position: relative;
 }
 div.dj-banner img{
     width: 100%;
     height: 100%;
+}
+.dj-banner_word{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    /* border: 1px solid yellow; */
+    font-size: 60px;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow:0 0 0.2em #87F, 0 0 0.2em #87F,
+    0 0 0.2em #87F;
+}
+.dj-banner_word-x{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid red; */
+    font-size: 70px;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow:0 0 0.2em #87F, 0 0 0.2em #87F,
+    0 0 0.2em #87F;
 }
 div.banner-down{
     display: flex;
@@ -621,20 +623,27 @@ div.footer-inf div{
     } 
     .box:hover{
         height: 300px;
+    }
+    .dj-banner_word{
+        font-size: 45px;
     } 
 }
 
 
 @media screen and (max-width: 767px){
-  button.hamburger{
-      display: block;   
-  }
-  div.menu-right{
-      display: none;
-  }
-  .menu-left{
-      display: none;
-  }
+    .rwd--nav{
+        display: block;
+    }
+    div.menu-right{
+        /* display: none; */
+        /* border: 1px solid yellow; */
+        position: absolute;
+        top: 37px;
+        right: 15px;
+    }
+    .menu-left{
+        display: none;
+    }
   .box{
       width: 88%;
       height: 400px;
@@ -675,6 +684,9 @@ div.footer-inf div{
        width: 100%;
        margin-bottom: 30px; 
   }
+  .dj-banner_word,.dj-banner_word-x{
+      font-size: 40px;
+  }
 }
   
 
@@ -705,4 +717,7 @@ div.footer-inf div{
   div.down2{
       font-size: 20px;
   }
+  .dj-banner_word,.dj-banner_word-x{
+    font-size: 20px;
+}
 }

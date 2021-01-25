@@ -96,7 +96,7 @@ div.menu-left > ul.menu{
     font-weight: bold;   
 }
 div.menu-right{
-    width: 15%;
+    width: 140px;
     min-width: 140px;
     /* border: 1px solid yellow; */
     position: relative;
@@ -167,9 +167,12 @@ ul.search > li:nth-child(3){
     margin: 20px auto;
     color: honeydew;
     font-size: 18px;
-    /* display: none; */
 }
-
+.search-bar input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
 
 
 ul.menu a{
@@ -315,10 +318,31 @@ div.lea-img{
     border-radius: 10px;
     overflow: hidden;
     margin-right: 10px;
+    position: relative;
+    cursor: pointer;
 }
 div.lea-img img{
     width: 100%;
     height: 100%;
+}
+.img-play{
+    font-size: 30px;
+    color: rgb(228, 225, 225);
+    /* border: 1px solid yellow; */
+    /* display: block; */
+    background-color: rgba(22, 22, 22, 0.616);
+}
+.in-play{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    display: none;
 }
 div.num{
     font-size: 30px;
@@ -335,6 +359,9 @@ div.song-name{
     /* border: 1px solid yellow; */
     margin-right: 10px;
     flex-grow:1;
+}
+div.song-name a{
+    color: rgb(186, 202, 186);
 }
 div.add{
     color: rgb(80, 67, 196);
@@ -368,7 +395,7 @@ div.heart{
     text-align: center;
     margin-right: 10px;
 }
-div.play{
+div.play-mu{
     color: rgb(80, 67, 196);
     font-size: 30px;
     cursor: pointer;
@@ -388,7 +415,9 @@ div.song-name span{
     font-weight: normal;
     color: rgb(164, 168, 164);
 }
-
+div.song-name span a{
+    color: rgb(164, 168, 164);
+}
 
 
 footer.footer{
@@ -463,7 +492,7 @@ div.social-icon11 div{
 }
 div.footer-inf{
     display: flex;
-    width: 330px;
+    width: 300px;
     color: honeydew;
     justify-content: space-between;
     margin: 30px auto;
@@ -518,11 +547,15 @@ hr.banner-end{
 
 
   @media screen and (max-width: 767px){
-    button.hamburger{
-        display: block;   
+    .rwd--nav{
+        display: block;
     }
     div.menu-right{
-        display: none;
+        /* display: none; */
+        /* border: 1px solid yellow; */
+        position: absolute;
+        top: 37px;
+        right: 15px;
     }
     .menu-left{
         display: none;
@@ -547,7 +580,7 @@ hr.banner-end{
         font-size: 16px;
     }
     div.appget{
-        width: 330px;
+        width: 300px;
         flex-direction: column;
     }
     div.googleplay,div.apple{
@@ -556,6 +589,12 @@ hr.banner-end{
     div.lea-img{
         width: 50px;
         height: 50px;
+    }
+    .play-mu{
+        display: none;
+    }
+    .in-play{
+        /* display: block; */
     }
   }
 

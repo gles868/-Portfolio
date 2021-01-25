@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./rwd-hum.css">
     <link rel="stylesheet" href="log-in.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- 播放器 -->
+    <link rel="stylesheet" href="./vendors/jqueryMusic201805240027/css/css.css">
     <link rel="stylesheet" href="./creator.css">
 </head>
 
@@ -79,7 +81,7 @@
                     <div class="inf-title">
                         粉絲
                     </div>
-                    <div class="inf-num">
+                    <div class="inf-num-fans">
                         22,916
                     </div>
                 </div>
@@ -98,6 +100,9 @@
             </div>
             <div class="lea-img">
                 <img src="./img/cheator/輕輕.png" alt="">
+                <div class="in-play">
+                    <i class="far fa-play-circle img-play"></i>
+                </div>
             </div>
             <div class="song-name">
                 輕輕<br><span>lil-Chen</span>
@@ -108,7 +113,7 @@
             <div class="heart">
                 <i class="fas fa-heartbeat"></i> 18.8k
             </div>
-            <div class="play">
+            <div class="play--x">
                 <i class="far fa-play-circle"></i>
             </div>
         </div>
@@ -119,6 +124,9 @@
             </div>
             <div class="lea-img">
                 <img src="./img/cheator/問題.png" alt="">
+                <div class="in-play">
+                    <i class="far fa-play-circle img-play"></i>
+                </div>
             </div>
             <div class="song-name">
                 Call In 計劃-問題先生<br><span>lil-Chen</span>
@@ -129,7 +137,7 @@
             <div class="heart">
                 <i class="fas fa-heartbeat"></i> 17.8k
             </div>
-            <div class="play">
+            <div class="play--x">
                 <i class="far fa-play-circle"></i>
             </div>
         </div>
@@ -140,6 +148,9 @@
             </div>
             <div class="lea-img">
                 <img src="./img/cheator/責備.png" alt="">
+                <div class="in-play">
+                    <i class="far fa-play-circle img-play"></i>
+                </div>
             </div>
             <div class="song-name">
                 有人責備我們不夠深入<br><span>lil-Chen</span>
@@ -150,7 +161,7 @@
             <div class="heart">
                 <i class="fas fa-heartbeat"></i> 16.8k
             </div>
-            <div class="play">
+            <div class="play--x">
                 <i class="far fa-play-circle"></i>
             </div>
         </div>
@@ -161,6 +172,9 @@
             </div>
             <div class="lea-img">
                 <img src="./img/cheator/wanna be.png" alt="">
+                <div class="in-play">
+                    <i class="far fa-play-circle img-play"></i>
+                </div>
             </div>
             <div class="song-name">
                 Call ln 計劃-I Wanna Be<br><span>lil-Chen</span>
@@ -171,7 +185,7 @@
             <div class="heart">
                 <i class="fas fa-heartbeat"></i> 15.8k
             </div>
-            <div class="play">
+            <div class="play--x">
                 <i class="far fa-play-circle"></i>
             </div>
         </div>
@@ -182,6 +196,9 @@
             </div>
             <div class="lea-img">
                 <img src="./img/cheator/keep.png" alt="">
+                <div class="in-play">
+                    <i class="far fa-play-circle img-play"></i>
+                </div>
             </div>
             <div class="song-name">
                 Call ln 計劃-Keep Up<br><span>lil-Chen</span>
@@ -192,9 +209,13 @@
             <div class="heart">
                 <i class="fas fa-heartbeat"></i> 14.8k
             </div>
-            <div class="play">
+            <div class="play--x">
                 <i class="far fa-play-circle"></i>
             </div>
+        </div>
+        <hr class="songlist-hr">
+        <div class="see--more">
+            查看更多歌曲
         </div>
     </div>
 
@@ -211,7 +232,7 @@
                 </div>
             </div>
             <div class="show_small">
-                <img src="./img/creator-show.jpg" alt="">
+                <img src="./img/cheator/bmc.jpg" alt="">
             </div>
 
             <div class="show-Past-events">
@@ -440,6 +461,100 @@
     </script>
 
 
+    <!-- 數字跑馬 -->
+    <script src="./js/TweenMax.min.js"></script>
+    <script>
+        var demo = { score: 0 },
+            scoreDisplay = document.querySelector(".inf-num-fans");
+
+        //創建一個介於20秒內改變分數的屬性值從0到100。
+        var tween = TweenLite.to(demo, 3, {
+            score: 22916,
+            onUpdate: showScore
+        })
+
+        //在tween update時通過這個功能輸出。
+        function showScore() {
+            scoreDisplay.innerHTML = demo.score.toFixed(0);
+        }
+    </script>
+
+    <script>
+        var demo1 = { score: 0 },
+            scoreDisplay1 = document.querySelector(".inf-num");
+
+        //創建一個介於20秒內改變分數的屬性值從0到100。
+        var tween = TweenLite.to(demo1, 2, {
+            score: 5,
+            onUpdate: showScore1
+        })
+
+        //在tween update時通過這個功能輸出。
+        function showScore1() {
+            scoreDisplay1.innerHTML = demo1.score.toFixed(0);
+        }
+    </script>
+
+    <script>
+        $(`.song-line`).hover(function () {
+            $(this).toggleClass(`song-line-hover`);
+
+            $(this).find(`div`).first().next().next().next().toggle(300);
+        });
+    </script>
+
+    <script>
+        $(`.lea-img`).hover(function () {
+            $(this).find('div').first().toggle();
+        });
+    </script>
+    <!-- 背景彩帶 -->
+    <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="./vendors/ribbon/ribbon.js"></script>
+
+    <!-- 音樂撥放器 -->
+    <script src="./Music-player.js"></script>
+    <script src="./vendors/jqueryMusic201805240027/js/TweenMax.min.js"></script>
+    <div class="player">
+        <div class="player__bar">
+            <div class="player__album">
+                <div class="player__albumImg active-song" data-author="問題先生" data-song="lil-Chen" data
+                    data-src="./vendors/jqueryMusic201805240027/Powfu - death bed.mp3"
+                    style="background-image: url(./img/single.png)"> </div>
+                <div class="player__albumImg" data-author="Khalid" data-song="Rich Brian" data
+                    data-src="./vendors/jqueryMusic201805240027/Rich Brian - BALI ft. Guapdad 4000 (Lyric Video).mp3"
+                    style="background-image: url(./img/rich.png)"> </div>
+                <div class="player__albumImg" data-author="月亮代表我的心" data-song="鄧麗君" data
+                    data-src="./vendors/jqueryMusic201805240027/月亮代表我的心.mp3"
+                    style="background-image: url(./img/狼\ -\ Wolf.png)"> </div>
+            </div>
+            <div class="player__controls">
+                <div class="player__prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="player__play">
+                    <i class="fas fa-play see"></i>
+                    <i class="far fa-pause-circle"></i>
+                </div>
+                <div class="player__next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="volume_up">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="volume_mute">
+                    <i class="fas fa-volume-mute"></i>
+                </div>
+                <input type="range" class="volume">
+            </div>
+        </div>
+        <div class="player__timeline">
+            <p class="player__author"></p>
+            <p class="player__song"></p>
+            <div class="player__timelineBar" id="player__timelineBar">
+                <div id="playhead"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./log-in.css">
     <!-- loading -->
     <link rel="stylesheet" href="./loading.css">
+    <!-- 播放器 -->
+    <link rel="stylesheet" href="./vendors/jqueryMusic201805240027/css/css.css">
     <!-- 原css -->
     <link rel="stylesheet" href="./upload.css">
 </head>
@@ -92,9 +94,11 @@
                     發佈時間
                 </div>
                 <input class="upload-date" type="text" placeholder="2020/10/12">
-                <input class="upload-song-content" type="text" placeholder="請輸入專輯介紹文字">
-                <div>
-                    剩餘字元數:500
+                <!-- <input class="upload-song-content" type="text" placeholder="請輸入專輯介紹文字"> -->
+                <textarea name="" id="upload-song-content" cols="30" rows="17" maxlength="500"
+                    placeholder="請輸入專輯介紹文字"></textarea>
+                <div id="feedback">
+
                 </div>
                 <div class="upload-song-a">
                     發佈並上傳歌曲
@@ -182,14 +186,7 @@
     <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="./vendors/ribbon/ribbon.js"></script>
     <!-- jq -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 漢堡CSS.JS -->
-    <script>
-        $(function () {
-            $("button.hamburger").on("click", function () {
-                $(this).toggleClass("is-active");
-            });
-        });
-    </script>
+
 
     <!-- 搜尋音樂bar -->
     <script>
@@ -234,13 +231,13 @@
             </a>
         </div>
         <div id="nav5" class="nav-4x small nav5 diamond">
-            <a href="./songlist.html" target="_parent" alt="">
+            <a href="./upload.html" target="_parent" alt="">
                 <i class="fas fa-cloud-upload-alt icon-6"></i>
                 <span class="nav-name5">Cloud</span>
             </a>
         </div>
         <div id="nav6" class="nav-5x small nav6 diamond">
-            <a href="./upload.html" target="_parent" alt="">
+            <a href="./songlist.html" target="_parent" alt="">
                 <i class="fas fa-clipboard-list icon-5"></i>
                 <span class="nav-name6">List</span>
             </a>
@@ -329,15 +326,70 @@
     </script>
 
 
+    <!-- 音樂撥放器 -->
+    <script src="./Music-player.js"></script>
+    <script src="./vendors/jqueryMusic201805240027/js/TweenMax.min.js"></script>
+    <div class="player">
+        <div class="player__bar">
+            <div class="player__album">
+                <div class="player__albumImg active-song" data-author="問題先生" data-song="lil-Chen" data
+                    data-src="./vendors/jqueryMusic201805240027/Powfu - death bed.mp3"
+                    style="background-image: url(./img/single.png)"> </div>
+                <div class="player__albumImg" data-author="Khalid" data-song="Rich Brian" data
+                    data-src="./vendors/jqueryMusic201805240027/Rich Brian - BALI ft. Guapdad 4000 (Lyric Video).mp3"
+                    style="background-image: url(./img/rich.png)"> </div>
+                <div class="player__albumImg" data-author="月亮代表我的心" data-song="鄧麗君" data
+                    data-src="./vendors/jqueryMusic201805240027/月亮代表我的心.mp3"
+                    style="background-image: url(./img/狼\ -\ Wolf.png)"> </div>
+            </div>
+            <div class="player__controls">
+                <div class="player__prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="player__play">
+                    <i class="fas fa-play see"></i>
+                    <i class="far fa-pause-circle"></i>
+                </div>
+                <div class="player__next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="volume_up">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="volume_mute">
+                    <i class="fas fa-volume-mute"></i>
+                </div>
+                <input type="range" class="volume">
+            </div>
+        </div>
+        <div class="player__timeline">
+            <p class="player__author"></p>
+            <p class="player__song"></p>
+            <div class="player__timelineBar" id="player__timelineBar">
+                <div id="playhead"></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- 字數偵測 -->
+    <script>
+        $(document).ready(function () {
+            let textMax = $('#upload-song-content').attr('maxlength');
 
+            $('#feedback').html(`剩餘字元數: <span style="color:honeydew;">${textMax}</span>`);
 
+            $('#upload-song-content').keyup(function () {
+                let textLength = $(this).val().length;
+                $('#feedback').html(`剩餘字元數: <span style="color:honeydew;">${textMax - textLength}</span>`);
 
-
-
-
-
-
+                // let theContent = $(this).val();
+                // $('#content').css({
+                //     whiteSpace: 'pre',
+                //     font: '13.33px Courier New',
+                // }).text(theContent);
+            });
+        });			
+    </script>
 
 
 </body>

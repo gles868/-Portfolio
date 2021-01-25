@@ -16,10 +16,12 @@
     /* animation: gradient 5s infinite;
     -webkit-animation: gradient 5s infinite; */
     overflow: hidden;
+    transform: translateY(1000);
   }
 
   div.rot{
     animation: rotate 3s infinite linear;
+    transform:translateY(1000)
   }
   @keyframes rotate {
     0% {
@@ -62,6 +64,7 @@
     cursor: pointer;
     box-shadow: 1px 4px 10px #101010;
     /* display: none; */
+    z-index: 100;
   }
   
   .diamond:active {

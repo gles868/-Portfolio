@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonic Drink Can</title>
 
-    <!-- 大家都在聽套件CSS -->
+    <!-- 大家都在聽CSS -->
     <link type="text/css" rel="stylesheet" href="./vendors/jqueryswiperlbt/css/style.css">
     <!-- icon-CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- banner套件CSS     -->
     <link rel="stylesheet" href="./vendors/jqueryLayerSlider/layerslider.css">
-    <!-- aos套件 -->
+    <!-- aos -->
     <link rel="stylesheet" href="./vendors/aos/css/aoscss.css">
     <!-- 小動畫套件 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-    <!-- 漢堡套件 -->
-    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
     <!-- rwd選單 -->
     <link rel="stylesheet" href="./rwd-hum.css">
     <!-- log-in -->
     <link rel="stylesheet" href="./log-in.css">
     <!-- loading -->
     <link rel="stylesheet" href="./loading.css">
+    <!-- 播放器 -->
+    <link rel="stylesheet" href="./vendors/jqueryMusic201805240027/css/css.css">
     <!-- 主樣式CSS -->
     <link rel="stylesheet" href="./indexcss.css">
 </head>
@@ -97,7 +97,7 @@
 
 
 
-    <p class="runhorse animate__infinite animate__animated animate__flipInX">【這些歌你聽了嗎?】精選推薦歌單<i
+    <p class="runhorse animate__infinite animate__animated animate__fadeOutDown">【這些歌你聽了嗎?】精選推薦歌單<i
             class="fas fa-music"></i> sound of 2020馬上聽</p>
     <hr class="banner-end">
 
@@ -113,30 +113,75 @@
     <div class="banner-box">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide-center none-effect">
-                    <a href="javascript:;">
-                        <img src="./img/歌圖1.png" about="" title="">
+                <div class="swiper-slide swiper-slide-center none-effect rel">
+                    <img src="./img/歌圖1.png" about="" title="">
+                    <a href="./single.html">
+                        <div class="img_INF">
+                            fairy-tale-王喬伊
+                        </div>
                     </a>
+                    <span class="in-play">
+                        <i class="far fa-play-circle img-play"></i>
+                    </span>
+                    <p class="hov-bgc">
+
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="./img/歌圖2.png" about="" title="">
+                <div class="swiper-slide rel">
+                    <img src="./img/歌圖2.png" about="" title="">
+                    <a href="./single.html">
+                        <div class="img_INF">
+                            怪天氣-9m88
+                        </div>
                     </a>
+                    <span class="in-play">
+                        <i class="far fa-play-circle img-play"></i>
+                    </span>
+                    <p class="hov-bgc">
+
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="./img/歌圖3.jpg" about="" title="">
+                <div class="swiper-slide rel">
+                    <img src="./img/歌圖3.jpg" about="" title="">
+                    <a href="./single.html">
+                        <div class="img_INF">
+                            FIREBALL-Nick
+                        </div>
                     </a>
+                    <span class="in-play">
+                        <i class="far fa-play-circle img-play"></i>
+                    </span>
+                    <p class="hov-bgc">
+
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="./img/歌圖6.jpg" about="" title="">
+                <div class="swiper-slide rel">
+                    <img src="./img/歌圖6.jpg" about="" title="">
+                    <a href="./single.html">
+                        <div class="img_INF">
+                            呼吸的你-BenFisk
+                        </div>
                     </a>
+                    <span class="in-play">
+                        <i class="far fa-play-circle img-play"></i>
+                    </span>
+                    <p class="hov-bgc">
+
+                    </p>
                 </div>
-                <div class="swiper-slide">
-                    <a href="javascript:;">
-                        <img src="./img/歌圖5.jpg" about="" title="">
+                <div class="swiper-slide rel">
+                    <img src="./img/歌圖5.jpg" about="" title="">
+                    <a href="./single.html">
+                        <div class="img_INF">
+                            simple love-阿薛
+                        </div>
                     </a>
+                    <span class="in-play">
+                        <i class="far fa-play-circle img-play"></i>
+                    </span>
+                    <p class="hov-bgc">
+
+                    </p>
                 </div>
 
             </div>
@@ -173,7 +218,7 @@
                     <a href="./single.html"><img src="./img/首頁達人歌1.png" alt=""></a>
                 </div>
                 <div class="box1world">
-                    Breathe (feat. Shizuka)
+                    <b>Breathe</b> (feat. Shizuka)
                 </div>
                 <div class="box1love">
                     <i class="fas fa-heartbeat"></i> 24.1k
@@ -186,10 +231,10 @@
         <div class="box2">
             <div class="mas-box1top">
                 <div class="box1img" data-aos="zoom-in" data-aos-duration="1500">
-                    <img src="./img/首頁達人歌2.png" alt="">
+                    <a href="./single.html"><img src="./img/首頁達人歌2.png" alt=""></a>
                 </div>
                 <div class="box1world">
-                    Breathe (feat. Shizuka)
+                    <b>再見Hip-Hop</b>張震嶽/熱狗/功夫胖/派克特
                 </div>
                 <div class="box1love">
                     <i class="fas fa-heartbeat"></i> 16.8k
@@ -208,10 +253,10 @@
         <div class="box3">
             <div class="mas-box1top">
                 <div class="box1img" data-aos="zoom-in" data-aos-duration="1500">
-                    <img src="./img/首頁達人歌3.png" alt="">
+                    <a href="./single.html"><img src="./img/首頁達人歌3.png" alt=""></a>
                 </div>
                 <div class="box1world">
-                    談婚驚悚故事
+                    <b>談婚驚悚故事</b> 李密
                 </div>
                 <div class="box1love">
                     <i class="fas fa-heartbeat"></i> 20.2k
@@ -227,9 +272,10 @@
 
 
     <div class="liveshow">
-        <h2>演出活動</h2>
+        <h2 style="margin-bottom: 20px;
+        color:rgb(221, 236, 221);">演出活動</h2>
         <div class="liveimg" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-out-cubic">
-            <img src="./img/首頁演出活動圖.jpg" alt="">
+            <a href="./liveshow.html"><img src="./img/首頁演出活動圖.jpg" alt=""></a>
         </div>
         <div class="liveshow-right">
             <h2 class="liveshow-title" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-out-cubic">
@@ -314,46 +360,53 @@
             </div>
         </div>
     </div>
-
-
+    <!-- tweenMax -->
+    <script src="./vendors/jqueryMusic201805240027/js/TweenMax.min-1.js"></script>
 
     <!-- rwd選單 -->
     <div class="rwd--nav">
-        <div id="navMenu" class="diamond">
-            <button class="hamburger hamburger--emphatic" type="button">
+        <div id="navMenu" class="diamond rot">
+            <!-- <button class="hamburger hamburger--emphatic" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
-            </button>
+            </button> -->
+            <img src="./img/ablum5.jpg" alt="">
         </div>
         <div id="nav1" class="nav-x small nav1 diamond">
             <a href="./leaderboard.html" target="_parent" alt="">
                 <i class="fas fa-crown fa-x icon-1"></i>
+                <span class="nav-name1">Rank</span>
             </a>
         </div>
-        <div id="nav2" class="nav-x small nav2 diamond">
+        <div id="nav2" class="nav-1x small nav2 diamond">
             <a href="./radio.html" target="_parent" alt="">
                 <i class="fas fa-compact-disc icon-2"></i>
+                <span class="nav-name2">DJ</span>
             </a>
         </div>
-        <div id="nav3" class="nav-x small nav3 diamond">
+        <div id="nav3" class="nav-2x small nav3 diamond">
             <a href="./singer.html" target="_parent" alt="">
                 <i class="fab fa-napster icon-3"></i>
+                <span class="nav-name3">Singer</span>
             </a>
         </div>
-        <div id="nav4" class="nav-x small nav4 diamond">
+        <div id="nav4" class="nav-3x small nav4 diamond">
             <a href="./liveshow.html" target="_parent" alt="">
                 <i class="fas fa-broadcast-tower icon-4"></i>
+                <span class="nav-name4">Show</span>
             </a>
         </div>
-        <div id="nav5" class="nav-x small nav5 diamond">
-            <a href="./songlist.html" target="_parent" alt="">
-                <i class="fas fa-cloud-upload-alt icon-6"></i>
-            </a>
-        </div>
-        <div id="nav6" class="nav-x small nav6 diamond">
+        <div id="nav5" class="nav-4x small nav5 diamond">
             <a href="./upload.html" target="_parent" alt="">
+                <i class="fas fa-cloud-upload-alt icon-6"></i>
+                <span class="nav-name5">Cloud</span>
+            </a>
+        </div>
+        <div id="nav6" class="nav-5x small nav6 diamond">
+            <a href="./songlist.html" target="_parent" alt="">
                 <i class="fas fa-clipboard-list icon-5"></i>
+                <span class="nav-name6">List</span>
             </a>
         </div>
     </div>
@@ -362,7 +415,13 @@
     <script>
         $(document).ready(function () {
             $("#navMenu").click(function () {
+                $("#navMenu").toggleClass("rot");
                 $(".nav-x").toggleClass("small");
+                $(".nav-1x").toggleClass("small");
+                $(".nav-2x").toggleClass("small");
+                $(".nav-3x").toggleClass("small");
+                $(".nav-4x").toggleClass("small");
+                $(".nav-5x").toggleClass("small");
                 // if ($(".nav").hasClass("small")) {
                 //     $(".nav").removeClass("small");
                 // } else {
@@ -371,6 +430,7 @@
             });
         });
     </script>
+
 
 
 
@@ -388,8 +448,6 @@
 
     <!-- 大家都在聽輪播 -->
     <script type="text/javascript" src="./vendors/jqueryswiperlbt/js/swiper.min.js"></script>
-    <!-- 背景彩帶 -->
-    <!-- <script src="./vendors/ribbon/ribbon.js"></script> -->
     <!-- banner輪播JS -->
     <script type="text/javascript">
         var lsjQuery = jQuery;
@@ -422,22 +480,18 @@
         });
     </script>
 
-
+    <!-- 歌曲hover -->
+    <script>
+        $(`.rel`).hover(function () {
+            $(this).find(`p`).toggle();
+            $(this).find(`span`).toggle();
+        });
+    </script>
 
     <!-- 搜尋音樂bar -->
     <script>
         $(`.search`).find(`li`).first().click(function () {
             $(`.search-bar`).slideToggle();
-        });
-    </script>
-
-
-    <!-- 漢堡JS -->
-    <script>
-        $(function () {
-            $("button.hamburger").on("click", function () {
-                $(this).toggleClass("is-active");
-            });
         });
     </script>
 
@@ -530,6 +584,59 @@
             });
         });
     </script>
+
+
+    <!-- 音樂撥放器 -->
+    <script src="./Music-player.js"></script>
+
+    <div class="player">
+        <div class="player__bar">
+            <div class="player__album">
+                <div class="player__albumImg active-song" data-author="fairy" data-song="王喬伊" data
+                    data-src="./vendors/jqueryMusic201805240027/Powfu - death bed.mp3"
+                    style="background-image: url(./img/歌圖1.png)"> </div>
+                <div class="player__albumImg" data-author="怪天氣" data-song="9m-88" data
+                    data-src="./vendors/jqueryMusic201805240027/Rich Brian - BALI ft. Guapdad 4000 (Lyric Video).mp3"
+                    style="background-image: url(./img/歌圖2.png)"> </div>
+                <div class="player__albumImg" data-author="FIREBALL" data-song="Nick" data
+                    data-src="./vendors/jqueryMusic201805240027/月亮代表我的心.mp3"
+                    style="background-image: url(./img/歌圖3.jpg)"> </div>
+                <div class="player__albumImg" data-author="呼吸的你" data-song="BenFisk" data
+                    data-src="./vendors/jqueryMusic201805240027/月亮代表我的心.mp3"
+                    style="background-image: url(./img/歌圖6.jpg)"> </div>
+                <div class="player__albumImg" data-author="simple" data-song="阿薛" data
+                    data-src="./vendors/jqueryMusic201805240027/月亮代表我的心.mp3"
+                    style="background-image: url(./img/歌圖5.jpg)"> </div>
+            </div>
+            <div class="player__controls">
+                <div class="player__prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="player__play">
+                    <i class="fas fa-play see"></i>
+                    <i class="far fa-pause-circle"></i>
+                </div>
+                <div class="player__next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="volume_up">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="volume_mute">
+                    <i class="fas fa-volume-mute"></i>
+                </div>
+                <input type="range" class="volume">
+            </div>
+        </div>
+        <div class="player__timeline">
+            <p class="player__author"></p>
+            <p class="player__song"></p>
+            <div class="player__timelineBar" id="player__timelineBar">
+                <div id="playhead"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 </body>

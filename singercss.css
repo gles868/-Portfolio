@@ -93,7 +93,7 @@ div.menu-left > ul.menu{
     font-weight: bold;   
 }
 div.menu-right{
-    width: 15%;
+    width: 140px;
     min-width: 140px;
     /* border: 1px solid yellow; */
     position: relative;
@@ -165,7 +165,11 @@ ul.search > li:nth-child(3){
     margin: 20px auto;
     color: honeydew;
     font-size: 18px;
-    /* display: none; */
+}
+.search-bar input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
 }
 
 
@@ -789,7 +793,7 @@ div.singer18 img{
     width: 100%;
     height: 100%;
 }
-div.small{
+div.small-1{
     width: 10px;
     height: 10px;
     background-color: rgb(241, 188, 16);
@@ -809,8 +813,8 @@ div.small2{
     border: 1px solid rgb(241, 188, 16);
     border-radius: 50%;
     position: absolute;
-    bottom:18px;
-    left:274px;
+    top:21%;
+    left:93%;
     filter:blur(1px);
     animation-delay: 2.4s;
     animation-duration: .8s;
@@ -822,8 +826,8 @@ div.small3{
     border: 1px solid rgb(241, 188, 16);
     border-radius: 50%;
     position: absolute;
-    bottom:228px;
-    left:532px;
+    top:66%;
+    left:53%;
     filter:blur(1px);
     animation-delay: 2.4s;
     animation-duration: .8s;
@@ -835,8 +839,8 @@ div.small4{
     border: 1px solid rgb(241, 188, 16);
     border-radius: 50%;
     position: absolute;
-    top:190px;
-    left:95px;
+    top:23%;
+    left:10%;
     filter:blur(1px);
     animation-delay: 2.4s;
     animation-duration: .8s;
@@ -887,8 +891,8 @@ div.small8{
     border: 1px solid rgb(241, 188, 16);
     border-radius: 50%;
     position: absolute;
-    top:304px;
-    left:161px;
+    top:54%;
+    left:44%;
     filter:blur(.9px);
     animation-delay: 2.4s;
     animation-duration: .8s;
@@ -900,8 +904,8 @@ div.small9{
     border: 1px solid rgb(241, 188, 16);
     border-radius: 50%;
     position: absolute;
-    top:218px;
-    left:133px;
+    top:42%;
+    left:17%;
     filter:blur(.9px);
     animation-delay: 2.4s;
     animation-duration: .8s;
@@ -940,8 +944,8 @@ div.small12{
     border: 1px solid rgb(241, 188, 16);
     border-radius: 50%;
     position: absolute;
-    top:220px;
-    left:75px;
+    top:46%;
+    left:66%;
     filter:blur(.9px);
     animation-delay: 2.4s;
     animation-duration: .8s;
@@ -1136,7 +1140,7 @@ div.social-icon11 div{
 }
 div.footer-inf{
     display: flex;
-    width: 330px;
+    width: 300px;
     color: honeydew;
     justify-content: space-between;
     margin: 30px auto;
@@ -1165,15 +1169,19 @@ div.footer-inf div{
 
 
 @media screen and (max-width: 767px){
-  button.hamburger{
-      display: block;   
-  }
-  div.menu-right{
-      display: none;
-  }
-  .menu-left{
-      display: none;
-  }
+    .rwd--nav{
+        display: block;
+    }
+    div.menu-right{
+        /* display: none; */
+        /* border: 1px solid yellow; */
+        position: absolute;
+        top: 37px;
+        right: 15px;
+    }
+    .menu-left{
+        display: none;
+    }
   
 }
   

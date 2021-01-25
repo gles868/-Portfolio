@@ -5,39 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>liveshow</title>
-    <!-- 漢堡套件 -->
-    <link rel="stylesheet" href="./vendors/hamburgers-master/dist/hamburgers.css">
+    <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
+    <!-- 小動畫     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- rwd選單 -->
+    <link rel="stylesheet" href="./rwd-hum.css">
+    <!-- log-in -->
+    <link rel="stylesheet" href="./log-in.css">
+    <!-- loading -->
+    <link rel="stylesheet" href="./loading.css">
+    <!-- 播放器 -->
+    <link rel="stylesheet" href="./vendors/jqueryMusic201805240027/css/css.css">
     <link rel="stylesheet" href="./liveshowcss.css">
 </head>
 
 <body>
-    <!-- RWD導覽列 -->
-    <nav class="rwd">
-        <ul class="rwd-nav">
-            <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
-            <li><a href="./radio.html" target="_parent" alt="">DJ資訊</a></a></li>
-            <li><a href="./singer.html" target="_parent" alt="">創作者資訊</a></li>
-            <li><a href="./liveshow.html" target="_parent" alt="">演出活動</a></li>
-            <li><a href="./songlist.html" target="_parent" alt="">主題歌單</a></li>
-            <li><a href="./upload.html" target="_parent" alt="">我要上傳</a></li>
-        </ul>
-    </nav>
-    <!-- RWD導覽列 -->
     <nav class="nav">
         <div class="nav-box">
             <div class="logo">
                 <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
             </div>
             <div class="menu-all">
-                <button class="hamburger hamburger--emphatic" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
                 <div class="menu-left">
                     <ul class="menu">
                         <li><a href="./leaderboard.html" target="_parent" alt="">排行榜</a></li>
@@ -51,8 +42,8 @@
                 <div class="menu-right">
                     <ul class="search">
                         <li><i class="fas fa-search fa-2x"></i></li>
-                        <li><i class="fas fa-cloud-upload-alt fa-2x"></i></li>
-                        <li><i class="fas fa-user-circle fa-2x"></i></li>
+                        <li><i class="fas fa-headset fa-2x "></i></li>
+                        <li class="log"><i class="fas fa-user-circle fa-2x"></i></li>
                     </ul>
 
                     <div class="search-bar">
@@ -75,7 +66,7 @@
 
 
     <div class="liveshow-body">
-        <div class="show-search">
+        <form class="show-search">
             <input type="text" placeholder="關鍵字">
             <hr>
             <div class="place">
@@ -111,7 +102,7 @@
                 <option value="">下個月</option>
                 <option value="">選擇日期</option>
             </select>
-        </div>
+        </form>
         <div class="all-show-right">
             <div class="show-right">
                 <div class="datebox">
@@ -449,7 +440,6 @@
 
 
 
-
     <footer class="footer">
         <div class="footer-logo">
             <a href="./index.html" target="_parent" alt=""><img src="./img/log-x.png" alt=""></a>
@@ -503,31 +493,211 @@
         </div>
     </footer>
 
-
+    <!-- loading -->
+    <div class="load-box">
+        <div class="wrap">
+            <div class="bg">
+                <div class="loading">
+                    <span class="title">loading</span>
+                    <span class="text">Sonic Drink Can</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景彩帶 -->
     <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="./vendors/ribbon/ribbon.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 漢堡JS -->
-    <script>
-        $(function () {
-            $("button.hamburger").on("click", function () {
-                $(this).toggleClass("is-active");
-            });
-        });
 
-        $(function () {
-            $("button.hamburger").on("click", function () {
-                $("nav.rwd").slideToggle();
-            });
-        });
+    <script>
+        window.onload = function () {
+            $(`.load-box`).delay(4300).hide(0);
+        };
     </script>
 
-
+    <!-- 搜音樂 -->
     <script>
         $(`.search`).find(`li`).first().click(function () {
             $(`.search-bar`).slideToggle();
         });
     </script>
+
+
+    <!-- rwd選單 -->
+    <div class="rwd--nav">
+        <div id="navMenu" class="diamond rot">
+            <!-- <button class="hamburger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button> -->
+            <img src="./img/ablum5.jpg" alt="">
+        </div>
+        <div id="nav1" class="nav-x small nav1 diamond">
+            <a href="./leaderboard.html" target="_parent" alt="">
+                <i class="fas fa-crown fa-x icon-1"></i>
+                <span class="nav-name1">Rank</span>
+            </a>
+        </div>
+        <div id="nav2" class="nav-1x small nav2 diamond">
+            <a href="./radio.html" target="_parent" alt="">
+                <i class="fas fa-compact-disc icon-2"></i>
+                <span class="nav-name2">DJ</span>
+            </a>
+        </div>
+        <div id="nav3" class="nav-2x small nav3 diamond">
+            <a href="./singer.html" target="_parent" alt="">
+                <i class="fab fa-napster icon-3"></i>
+                <span class="nav-name3">Singer</span>
+            </a>
+        </div>
+        <div id="nav4" class="nav-3x small nav4 diamond">
+            <a href="./liveshow.html" target="_parent" alt="">
+                <i class="fas fa-broadcast-tower icon-4"></i>
+                <span class="nav-name4">Show</span>
+            </a>
+        </div>
+        <div id="nav5" class="nav-4x small nav5 diamond">
+            <a href="./upload.html" target="_parent" alt="">
+                <i class="fas fa-cloud-upload-alt icon-6"></i>
+                <span class="nav-name5">Cloud</span>
+            </a>
+        </div>
+        <div id="nav6" class="nav-5x small nav6 diamond">
+            <a href="./songlist.html" target="_parent" alt="">
+                <i class="fas fa-clipboard-list icon-5"></i>
+                <span class="nav-name6">List</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- rwd-jq -->
+    <script>
+        $(document).ready(function () {
+            $("#navMenu").click(function () {
+                $("#navMenu").toggleClass("rot");
+                $(".nav-x").toggleClass("small");
+                $(".nav-1x").toggleClass("small");
+                $(".nav-2x").toggleClass("small");
+                $(".nav-3x").toggleClass("small");
+                $(".nav-4x").toggleClass("small");
+                $(".nav-5x").toggleClass("small");
+                // if ($(".nav").hasClass("small")) {
+                //     $(".nav").removeClass("small");
+                // } else {
+                //     $(".nav").addClass("small");
+                // }
+            });
+        });
+    </script>
+
+
+    <!-- 登入 -->
+    <div class="page">
+        <div class="container-x">
+            <div class="log-left">
+                <div class="login">Login</div>
+                <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read
+                </div>
+            </div>
+            <div class="log-right">
+                <svg viewBox="0 0 320 300">
+                    <defs>
+                        <linearGradient inkscape:collect="always" id="linearGradient" x1="13" y1="193.49992" x2="307"
+                            y2="193.49992" gradientUnits="userSpaceOnUse">
+                            <stop style="stop-color:#ff00ff;" offset="0" id="stop876" />
+                            <stop style="stop-color:#ff0000;" offset="1" id="stop878" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                </svg>
+                <div class="log-in-form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- log-in -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="./log-in.js"></script>
+    <script src="./vendors/jquery-ui.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(`.search > li:nth-child(3)`).click(function () {
+                if ($(`.page`).css(`display`) == `none`) {
+                    $(`.page`).slideDown(2000, `easeInOutBounce`);
+                } else {
+                    $(`.page`).slideUp(500);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(document).click(function (e) {
+                e.stopPropagation();
+                if (!$(e.target).is(`div.page , div.page *,li.log,li.log *`)) {
+                    $(`.page`).slideUp(500);
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- 音樂撥放器 -->
+    <script src="./Music-player.js"></script>
+    <script src="./vendors/jqueryMusic201805240027/js/TweenMax.min.js"></script>
+    <div class="player">
+        <div class="player__bar">
+            <div class="player__album">
+                <div class="player__albumImg active-song" data-author="問題先生" data-song="lil-Chen" data
+                    data-src="./vendors/jqueryMusic201805240027/Powfu - death bed.mp3"
+                    style="background-image: url(./img/single.png)"> </div>
+                <div class="player__albumImg" data-author="Khalid" data-song="Rich Brian" data
+                    data-src="./vendors/jqueryMusic201805240027/Rich Brian - BALI ft. Guapdad 4000 (Lyric Video).mp3"
+                    style="background-image: url(./img/rich.png)"> </div>
+                <div class="player__albumImg" data-author="月亮代表我的心" data-song="鄧麗君" data
+                    data-src="./vendors/jqueryMusic201805240027/月亮代表我的心.mp3"
+                    style="background-image: url(./img/狼\ -\ Wolf.png)"> </div>
+            </div>
+            <div class="player__controls">
+                <div class="player__prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="player__play">
+                    <i class="fas fa-play see"></i>
+                    <i class="far fa-pause-circle"></i>
+                </div>
+                <div class="player__next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="volume_up">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="volume_mute">
+                    <i class="fas fa-volume-mute"></i>
+                </div>
+                <input type="range" class="volume">
+            </div>
+        </div>
+        <div class="player__timeline">
+            <p class="player__author"></p>
+            <p class="player__song"></p>
+            <div class="player__timelineBar" id="player__timelineBar">
+                <div id="playhead"></div>
+            </div>
+        </div>
+    </div>
 
 
 </body>

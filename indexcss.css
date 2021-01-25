@@ -10,9 +10,6 @@ body{
     background-color: #1f1f1f;
     font-family: 'Noto Sans TC', sans-serif;
 }
-button.hamburger{
-    display: none;
-}
 nav.nav{
     /* border:1px solid red; */
     background-color: #1f1f1f;
@@ -43,13 +40,6 @@ div.nav-box{
     justify-content: space-between; 
     background-color: #1f1f1f;
 }
-.hamburger{
-    z-index: 500;
-    padding: 5px;
-    display: block;
-    margin: 19px auto 0 auto;
-    outline: none;
-}
 div.menu-all{
     display: flex;
     justify-content: space-between;
@@ -72,7 +62,7 @@ div.menu-left > ul.menu{
     font-weight: bold;   
 }
 div.menu-right{
-    width: 15%;
+    width: 140px;
     min-width: 140px;
     /* border: 1px solid yellow; */
     position: relative;
@@ -82,6 +72,7 @@ div.menu-right > ul.search{
     display:flex;
     justify-content: space-between;
     color:rgb(216, 206, 206);
+    
 }
 ul.search li{
     cursor: pointer;
@@ -108,6 +99,7 @@ ul.search > li:nth-child(3){
     border-radius: 5px;
     background-color:rgb(26, 45, 52) ;
     display: none;
+    z-index: 99;
 }
 
 .border-up-empty{
@@ -140,7 +132,7 @@ ul.search > li:nth-child(3){
     border: 1px solid rgb(80, 67, 196) ;
     border-radius: 10px;
     padding: 5px 10px;
-    margin: 20px auto;
+    margin: 15px auto;
     color: honeydew;
     font-size: 18px;
 }
@@ -282,17 +274,18 @@ div.onepart{
 }
 div.every-title{
     display: inline-block;
-    width: 330px;
+    width: 200px;
     font-size: 28px;
     font-weight: bold;
-    color:rgb(216, 206, 206);   
+    color:rgb(216, 206, 206);
+       
 }
 div.every-genres{
     color:rgb(216, 206, 206);
     display: inline-block;
-    width: 330px;
+    width: 300px;
     cursor: pointer;
-
+    /* border: 1px solid yellow; */
 }
 div.all-play{
     display: inline-block;
@@ -305,11 +298,60 @@ div.all-play{
     top: 0;
     right: 0;   
 }
-
+.rel{
+    position: relative;
+    /* border: 1px solid yellow; */
+}
+.img_INF{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    color: rgb(197, 189, 176);
+    font-size: 18px;
+    /* border: 1px solid yellow; */
+    background-color: rgba(19, 16, 16, 0.527);
+    text-align: center;
+    z-index: 3;
+}
+.img-play{
+    font-size: 60px;
+    color: rgb(228, 225, 225);
+    /* border: 1px solid yellow; */
+    /* display: block; */
+    background-color: rgba(22, 22, 22, 0.616);
+}
+.in-play{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+}
+.hov-bgc{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 1px solid yellow; */
+    background-color: rgba(29, 28, 28, 0.411);
+    display: none;
+    z-index: 2;
+}
 
 div.mas-titleall{
     margin: 0 auto;
     width: 88%;
+    
     /* border: 1px solid yellow; */
 }
 p.mas-titleworld{
@@ -341,14 +383,14 @@ div.mas-allbox{
 div.box1{
     border:1px solid rgba(129, 114, 114, 0.8);
     border-radius: 5%;
-    width:330px;
+    width:355px;
     padding: 30px;
     background: radial-gradient(circle,rgb(21, 55, 75),rgb(0, 6, 27));
 }
 div.box2{
     border:1px solid rgba(129, 114, 114, 0.8);
     border-radius: 5%;
-    width:330px;
+    width:355px;
     padding: 30px;
     margin-left: 20px;
     background: radial-gradient(circle,rgb(21, 55, 75),rgb(0, 6, 27));
@@ -356,7 +398,7 @@ div.box2{
 div.box3{
     border:1px solid rgba(129, 114, 114, 0.8);
     border-radius: 5%;
-    width:330px;
+    width:355px;
     padding: 30px;
     margin-left: 20px;
     background: radial-gradient(circle,rgb(21, 55, 75),rgb(0, 6, 27));
@@ -381,11 +423,14 @@ div.box1world{
     /* border:1px solid black; */
     width: 100px;
     height: 60px;
-    color: white;   
+    color: rgb(216, 210, 210);   
 }
 div.box1love{
     color: white;
     transform: translateX(-30px);
+}
+div.box1love i{
+    color:rgb(80, 67, 196);
 }
 div.mas-box1top div:nth-child(3){
     align-self:flex-end;
@@ -427,13 +472,12 @@ hr.every-end{
     /* overflow: i; */
 }
 
-h2{
-    margin-bottom: 20px;
-    color: honeydew;
-}
+
 h2.mas-title{
     width: 88%;
     margin: 10px 0 20px 0px;
+    margin-bottom: 20px;
+    color:rgb(206, 188, 188);
 }
 
 div.liveshow{
@@ -473,7 +517,7 @@ div.livego{
     padding: 5px 20px;
     border-radius: 10px;
     background-color:rgb(80, 67, 196);
-    color:rgb(206, 188, 188);
+    color:rgb(221, 236, 221);
     font-weight: bold;
     text-align: center;
     margin: 20px auto 0 auto;
@@ -481,7 +525,7 @@ div.livego{
 }
 div.livego a{
     text-decoration:none;
-    color: rgb(206, 188, 188);
+    color:rgb(221, 236, 221);
 }
 hr.liveshow-end{
     display: block;
@@ -574,7 +618,11 @@ div.footer-inf div{
     cursor: pointer;
 }
 
-
+@media screen and (max-width: 1268px){
+    div.box3,div.box2,div.box1{
+        width: 330px;
+    }
+}
 @media screen and (max-width: 1199px){
     div.liveshow{
       width: 960px;
@@ -641,7 +689,11 @@ div.footer-inf div{
     div.box2{
         margin: 20px auto 0 auto;
     }
-    
+    .img_INF{
+        font-size: 12px;
+        top: 77%;
+        height: 23%;
+    }
 }
 
 

@@ -42,35 +42,8 @@ div.nav-box{
     justify-content: space-between; 
     background-color: #1f1f1f;
 }
-.hamburger{
-    z-index: 999;
-    position: fixed;
-    top: 4.5%;
-    right:0 ;
-}
-nav.rwd{
-    padding-top: 100px;
-    width: 100%;
-    height: 100vh;
-    /* border: 1px solid yellow; */
-    position: fixed;
-    /* top: 100px; */
-    left: 0;
-    background-color: #1f1f1fe7;
-    display: none;
-    z-index: 998;
-}
-.rwd-nav li{
-    text-align: center;
-    padding: 10px 0;
-}
-.rwd-nav li a{
-    text-decoration: none;
-    color: rgb(109, 117, 109);
-}
-.rwd-nav li a:hover{
-    color: honeydew;
-}
+
+
 div.menu-all{
     display: flex;
     justify-content: space-between;
@@ -93,7 +66,7 @@ div.menu-left > ul.menu{
     font-weight: bold;   
 }
 div.menu-right{
-    width: 15%;
+    width: 140px;
     min-width: 140px;
     /* border: 1px solid yellow; */
     position: relative;
@@ -164,8 +137,13 @@ ul.search > li:nth-child(3){
     margin: 20px auto;
     color: honeydew;
     font-size: 18px;
-    /* display: none; */
 }
+.search-bar input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
 
 
 
@@ -261,14 +239,47 @@ div.th-firstsong{
 }
 div.thimg1{
     /* border: 1px solid honeydew; */
-    width: 180px;
-    height: 180px;
+    width: 185px;
+    height: 185px;
     margin: 30px 30px 10px 30px;
+    position: relative;
+    cursor: pointer;
 }
 div.thimg1 img{
     width: 100%;
     height: 100%;
 }
+.img-play{
+    font-size: 50px;
+    color: rgb(228, 225, 225);
+    /* border: 1px solid yellow; */
+    /* display: block; */
+    background-color: rgba(22, 22, 22, 0.616);
+}
+.in-play{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    display: none;
+    z-index: 3;
+}
+.hov-bgc{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 1px solid yellow; */
+    background-color: rgba(29, 28, 28, 0.411);
+    display: none;
+}
+
 div.firstsong-name{
     width: 190px;
     margin: 0 auto;
@@ -282,9 +293,13 @@ div.firstsong-mark{
     margin-bottom: 10px;
     color: lightgray;
     font-weight: bold;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     padding: 5px 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.firstsong-mark:hover{
+    background-color:rgb(80, 67, 196);
 }
 hr{
     display: block;
@@ -297,7 +312,7 @@ hr{
 }
 p.firstsong-time{
     color: honeydew;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: center;
     /* border: 1px solid black; */
 }
@@ -477,17 +492,21 @@ div.footer-inf div{
   
 
   @media screen and (max-width: 767px){
+    .rwd--nav{
+        display: block;
+    }
     div.menu-right{
-        display: none;
+        /* display: none; */
+        /* border: 1px solid yellow; */
+        position: absolute;
+        top: 37px;
+        right: 15px;
     }
     .menu-left{
         display: none;
     }
     .menu{
         flex-direction: column;
-    }
-    button.hamburger{
-        display: block;   
     }
     ul.themetitle1 li:nth-child(1){
         font-size: 30px;
